@@ -1,0 +1,42 @@
+/*Taban CSS başlanğıç*/
+.footer_bg {
+  width: 100%;
+  border-top: 1px solid rgba(107, 124, 147, 0.12);
+  background-color: #e9e9e9;
+  margin: 0;
+}
+
+.footer {
+  width:1000px;
+  height:50px;
+  margin: 5px auto;
+}
+
+.footer span a {
+  margin:0 25px 0 10px;
+  color:#6b7c93;
+  font-size:12px;
+  cursor:hand;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+.footer span a:hover {
+  text-decoration:underline;
+  color:#4384c1;
+}
+
+
+.copyright {
+  width:100%;
+  line-height:16px;
+  font-size:10px;
+  text-align:center;
+  color:#ccc;
+  height: 19px;
+}
+
+.copyright span {
+  font-weight:bold;
+}
+/*Taban CSS son*/

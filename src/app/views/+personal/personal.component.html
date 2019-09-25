@@ -1,0 +1,111 @@
+<ev-topnavbar></ev-topnavbar>
+<div class="kese">
+  <div>
+    <div class="b63a"></div>
+    <div class="b64a">
+
+
+      <div class="ev-kb-ana">
+
+        <div>
+          <div class="ev-kb-sag">
+            <div>Onaylarınız ve Şifre İşlemleri</div>
+            <form [formGroup]="passwordForm" class="ev-kbf">
+              <div class="ev-kf">
+                <label class="ev-klbl">Eski Şifre</label>
+                <input formControlName="oldPassword" class="ev-kint" type="password">
+              </div>
+              <div class="ev-kf">
+                <label class="ev-klbl">Yeni Şifre</label>
+                <input formControlName="password" class="ev-kint" type="password">
+              </div>
+              <div class="ev-kf">
+                <label class="ev-klbl">Yeni Şifre Tekrar</label>
+                <input formControlName="confirmPassword" class="ev-kint" type="password">
+              </div>
+              <div class="ev-ksfr">
+                <div class="ev-kbtn" (click)="changePassword()">Şifremi Değiştir</div>
+              </div>
+            </form>
+
+            <div class="ev-kgu">
+              <div>Verilerinizin Güvenliği Önemlidir</div>
+              <div>
+                <p><label>Şifre Seçimi:</label>Şifrenizi tahmin edilmesi zor olan harf, sayı ve özel işaretlerden en az
+                  8 karakterli oluşturmanızı öneririz. Güvenliğiniz için şifrenizi başkaları ile paylaşmayın ve düzenli
+                  olarak değiştirin.</p>
+                <p><label>Google 2FA Onayı:</label> Google tarafından üretilen bir güvenlik sistemidir. Telefonunuza
+                  uygulamayı indirdikten sonra onay işlemini yapın. Google 2FA ile sitemizden girişleriniz artık daha
+                  güvenli olacaktır.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div>
+          <div class="ev-kb-sol">
+            <div>Kişisel Bilgileriniz</div>
+            <div style="text-align: center">
+              <h2 *ngIf="user.isUserApproved === true" style="color: #00D09B">Onaylı Kullanıcı</h2>
+              <h2 *ngIf="user.isUserApproved === false" style="color: #CC0000">Onaysız Kullanıcı</h2>
+            </div>
+
+            <form [formGroup]="personalForm" class="ev-kbf">
+              <div class="ev-kf">
+                <label class="ev-klbl">TC Kimlik No</label>
+                <input formControlName="identityNo" [OnlyNumber]="true" maxlength="11" class="ev-kint" type="text">
+              </div>
+              <div class="ev-kf">
+                <label class="ev-klbl">Ad</label>
+                <input formControlName="name" class="ev-kint" type="text">
+              </div>
+              <div class="ev-kf">
+                <label class="ev-klbl">Soyad</label>
+                <input formControlName="surname" class="ev-kint" type="text">
+              </div>
+              <div class="ev-kf">
+                <label class="ev-klbl">E-Posta</label>
+                <input formControlName="mail" class="ev-kint" type="email"></div>
+              <div class="ev-kf">
+                <label class="ev-klbl">Telefon</label>
+                <input formControlName="phone" class="ev-kint" maxlength="15" type="text">
+              </div>
+              <div class="ev-kf">
+                <label for="adres" class="ev-klbl ev-top1">Adres</label>
+                <textarea formControlName="adres" id="adres" name="adres" rows="2" class="ev-kint"></textarea>
+              </div>
+              <div class="ev-kf">
+                <label for="banka_adi" class="ev-klbl">Banka Adı</label>
+                <input formControlName="bankName" id="banka_adi" name="banka_adi" class="ev-kint" maxlength="15"
+                       placeholder="Çalıştığınız banka adını giriniz" type="text">
+              </div>
+              <div class="ev-kf">
+                <label for="iban_no" class="ev-klbl">IBAN</label>
+                <input formControlName="iban" id="iban_no" name="iban_no" class="ev-kint"
+                       placeholder="IBAN numaranızı giriniz" type="text">
+              </div>
+              <div class="ev-kfoto">Kimlik Fotokopisi (Önlü Arkalı)</div>
+              <div class="ev-kfoto-dosya">
+                <input [disabled]="user.isUserApproved" (change)="onFileChange($event,'')" class="form-control"
+                       type="file" accept="image/*,application/pdf">
+                <input [disabled]="user.isUserApproved" (change)="onFileChange($event,'2')" class="form-control"
+                       type="file" accept="image/*,application/pdf">
+              </div>
+            </form>
+            <div class="ev-kblg"><p>Eksik bilgilerinizi lütfen tamamlayınız. Güvenli bir alışveriş platformu için bu
+              bilgilere önem veriyoruz. Bilgileriniz üçüncü kişiler ile paylaşılmaz.</p>
+              <p>Kimlik bilgileriniz <b>doğrulandıktan sonra</b> sadece telefon, email ve adres bilgilerinizi
+                güncelleyebilirsiniz. Güncellenecek bilgiler ancak farklı kaynaklardan onay alındıktan sonra
+                yapılabilir. </p></div>
+            <div class="ev-kkyt">
+              <div class="ev-kbtn" (click)="updatePersonal()">Degişiklikleri Kaydet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div> <!--b64a kapanış-->
+
+  </div> <!--div isimsiz kapanış-->
+</div>

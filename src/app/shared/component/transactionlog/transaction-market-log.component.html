@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="table-row ev-header"> <!-- başlık  başlanğıç -->
+
+    <div class="ev-wrapper tanim">
+      <div class="ev-wrapper tanim-metin">
+        <div class="column module1">İşlem Adı</div>
+        <div class="column module2">Durum</div>
+      </div>
+      <div class="ev-wrapper tanim-idler">
+        <div class="column module3">Takip No</div>
+        <div class="column module4">Tarih</div>
+      </div>
+    </div>
+
+    <div class="ev-wrapper all-amount">
+      <div class="ev-wrapper amount">
+        <div class="column module5">Miktar</div>
+        <div class="column module6">Birim Fiyat</div>
+      </div>
+      <div class="ev-wrapper total-amount">
+        <div class="column module7">Komisyon</div>
+        <div class="column module8">Toplam Tutar</div>
+      </div>
+    </div>
+
+    <div class="column iptal">İptal</div>
+
+  </div> <!-- başlık  son -->
+
+  <div *ngFor="let order of orders" class="table-row ev-tr1"> <!-- örnek  data başlanğıç -->
+
+    <div class="ev-wrapper tanim">
+      <div class="ev-wrapper tanim-metin">
+        <div class="column module1">{{getTransactionType(order.idTransactionType,order.userCoinTransactionOrderGuid)}}
+        </div>
+        <div class="column module2">{{getTransactionState(order.idTransactionState)}}</div>
+      </div>
+      <div class="ev-wrapper tanim-idler">
+        <div class="column module3 truncate" [title]="getTrace(order)" [innerHTML]="getTrace(order)"></div>
+        <div class="column module4">{{getDate(order.createdAt)}}</div>
+      </div>
+    </div>
+    <div class="ev-wrapper all-amount">
+      <div class="ev-wrapper amount">
+        <div class="column module5">{{getDataAmount(order.coinAmount,order.idTransactionType,order.idCoinType)}}</div>
+        <div class="column module6">{{getDataUnitPrice(order.coinUnitPrice,order.idTransactionType)}}
+        </div>
+      </div>
+      <div class="ev-wrapper total-amount">
+        <div class="column module7">{{getCommission(order.commission)}}</div>
+        <div class="column module8">{{getDataTotal(order.coinUnitPrice , order.coinAmount,
+          order.moneyAmount,order.idTransactionType)}}
+        </div>
+      </div>
+    </div>
+    <div class="column iptal">
+      <span class="pointer label label-danger" *ngIf="!isCompeted(order.idTransactionState)"
+            (click)="cancelOrder(order.id,order.idTransactionState)">İptal</span>
+    </div>
+
+  </div>  <!-- örnek  data son -->
+</div>

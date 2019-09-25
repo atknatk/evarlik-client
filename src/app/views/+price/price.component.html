@@ -1,0 +1,128 @@
+<ev-topnavbar></ev-topnavbar>
+<div class="kese">
+  <div>
+    <div class="b63a"></div>
+    <div class="b64a">
+      <div class="ev_a10">
+        <div>Evarlik.com Komisyonları ve Ücretler (TL)</div>
+        <div class="ev_a12">
+
+          <div class="ev_a12_1">
+            <div><i class="_i btc"></i><span>Bitcoin - BTC</span></div>
+            <div class="ev_a12_3">
+              <div>
+                <div>Aylık Hacim</div>
+                <div>Maker</div>
+                <div>Taker</div>
+                <div>Transfer</div>
+              </div>
+              <div *ngFor="let btc of commision.BTC">
+                <div>{{btc.transactionVolume | number:'1.2-2'}}</div>
+                <div>%{{btc.makerPercatange *100 | number:'1.2-2'}}</div>
+                <div>%{{btc.takerPercatange *100 | number:'1.2-2'}}</div>
+                <div>{{btc.transferFeeCoinCount}} {{btc.idCoinType}}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ev_a12_1">
+            <div><i class="_i ltc"></i><span>Lite Coin - LTC</span></div>
+            <div class="ev_a12_3">
+              <div>
+                <div>Aylık Hacim</div>
+                <div>Maker</div>
+                <div>Taker</div>
+                <div>Transfer</div>
+              </div>
+              <div *ngFor="let ltc of commision.LTC">
+                <div>{{ltc.transactionVolume | number:'1.2-2'}}</div>
+                <div>%{{ltc.makerPercatange *100 | number:'1.2-2'}}</div>
+                <div>%{{ltc.takerPercatange *100 | number:'1.2-2'}}</div>
+                <div>{{ltc.transferFeeCoinCount}} {{ltc.idCoinType}}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ev_a12_1">
+            <div><i class="_i xrp"></i><span>Ripple - XRP</span></div>
+            <div class="ev_a12_3">
+              <div>
+                <div>Aylık Hacim</div>
+                <div>Maker</div>
+                <div>Taker</div>
+                <div>Transfer</div>
+              </div>
+              <div *ngFor="let xrp of commision.XRP">
+                <div>{{xrp.transactionVolume | number:'1.2-2'}}</div>
+                <div>%{{xrp.makerPercatange *100 | number:'1.2-2'}}</div>
+                <div>%{{xrp.takerPercatange *100 | number:'1.2-2'}}</div>
+                <div>{{xrp.transferFeeCoinCount}} {{xrp.idCoinType}}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ev_a12_1">
+            <div><i class="_i iota"></i><span>IOTA - IOTA</span></div>
+            <div class="ev_a12_3">
+              <div>
+                <div>Aylık Hacim</div>
+                <div>Maker</div>
+                <div>Taker</div>
+                <div>Transfer</div>
+              </div>
+              <div *ngFor="let iota of commision.IOTA">
+                <div>{{iota.transactionVolume | number:'1.2-2'}}</div>
+                <div>%{{iota.makerPercatange *100 | number:'1.2-2' }}</div>
+                <div>%{{iota.takerPercatange *100 | number:'1.2-2' }}</div>
+                <div>{{iota.transferFeeCoinCount}} {{iota.idCoinType}}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ev_a12_1">
+            <div><i class="_i dogec"></i><span>Doge Coin - DOGE</span></div>
+            <div class="ev_a12_3">
+              <div>
+                <div>Aylık Hacim</div>
+                <div>Maker</div>
+                <div>Taker</div>
+                <div>Transfer</div>
+              </div>
+              <div *ngFor="let doge of commision.DOGE">
+                <div>{{doge.transactionVolume | number:'1.2-2'}}</div>
+                <div>%{{doge.makerPercatange *100 | number:'1.2-2'}}</div>
+                <div>%{{doge.takerPercatange *100 | number:'1.2-2'}}</div>
+                <div>{{doge.transferFeeCoinCount}} {{doge.idCoinType}}</div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="ev_a13">
+            <div><span>Banka Ücretleri<label>(İşlemler TL ile yapılacaktır)</label></span></div>
+            <div>
+              <div>Para Yatırma</div>
+              <div>Para Çekme</div>
+            </div>
+            <div>
+              <div>Ücretsiz</div>
+              <div>2.50</div>
+            </div>
+
+          </div>
+
+          <div class="ev_a14">
+            <div><span><label>Maker:</label>Markete bir alım-veya satım pozisyonunu açan kişi olma durumudur. Piyasa yapıcı olarak da anılır.</span>
+            </div>
+            <div><span><label>Taker:</label>Market içinde açık alım-satım pozisyonlarından birine uygun teklif vererek, emir listelenmeden direkt alım-satım yapan tarafa denir.</span>
+            </div>
+            <div><span><label>Aylık Hacim:</label>Son 30 gün içerisinde yaptığınız alım-satım işlemlerinin TL cinsinden toplamıdır değeridir.</span>
+            </div>
+            <div><span><label>Transfer:</label> Coin gönderimlerinde işlemler için minerlar için ayrılmış sabit transfer ücretidir. <u>Gönderim ücreti firmamıza kalan gelir değildir.</u></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

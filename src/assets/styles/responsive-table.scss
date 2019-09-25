@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+/*
+ * Define the widths: play around with these
+ * to get a best fit.
+ */
+/*genel modüller*/
+/*genel modüller*/
+/*coin alış satış */
+/*coin alış satış */
+/*coin/para transfer */
+/*coin/para transfer */
+/*
+En büyük ekran tipi bütün başlıklar sıralı ve yaklaşık eşit büyüklükte
+ */
+
+.body {
+  padding: 0;
+  margin: 0;
+}
+
+.table-row {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  width: inherit;
+  padding: 0 15px;
+}
+
+.ev-wrapper {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+
+.column {
+  flex-grow: 0;
+  -webkit-flex-grow: 0;
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  vertical-align: top;
+}
+
+/*leaf level containers: widths*/
+
+.iptal {
+  width: 50px;
+  max-width: 50px;
+}
+
+.module1 {
+  min-width: 120px;
+}
+
+.module2 {
+  min-width: 100px;
+}
+
+.module3 {
+  width: 120px;
+  min-width: 120px;
+}
+
+.module4 {
+  min-width: 110px;
+}
+
+.tanim {
+  width: calc(50% - 25px);
+}
+
+.tanim2 {
+  width: calc(40% - 25px);
+}
+
+.module5 {
+  min-width: 100px;
+}
+
+.module6 {
+  min-width: 120px;
+}
+
+.module7 {
+  min-width: 100px;
+}
+
+.module8 {
+  min-width: 140px;
+}
+
+.all-amount {
+  width: calc(50% - 25px);
+}
+
+.total-amount, .all-amount, .tanim-idler, .tanim-metin {
+  width: 50%;
+}
+
+.all-bank {
+  width: 50%;
+  width: calc(60% - 25px);
+}
+
+.module9, .module10 {
+  min-width: 130px;
+}
+
+.ev-header {
+  color: #fff;
+  .module9, .module10 {
+    width: 210px;
+  }
+}
+
+/*these are growable text containers, with ellipsis to show truncated text*/
+
+.module9, .module10 {
+  /*		  flex-grow: 1;
+    -webkit-flex-grow: 1;
+    white-space: nowrap;
+    */
+  padding-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* growable ev-wrappers */
+
+.tanim, .tanim2, .all-amount, .all-bank {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+}
+
+/*
+ * Media queries: optimize for different screen widths.
+ */
+/*ev-wrapper widths*/
+/*
+ * Media breaks.
+ */
+/*
+First break: as many 2-row fields as possible. This will leave Severity
+// and Dates still horizontal, as they are odd numbered
+*/
+@media all and (max-width: 1000px) {
+  .ev-header .module9 {
+    width: 180px;
+  }
+  .tanim-metin, .tanim-idler {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+  }
+  .tanim {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 230px;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+    > div {
+      width: 100%;
+      > div {
+        width: 50%;
+      }
+    }
+  }
+  .amount, .bank, .total-amount {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+  }
+  .all-amount {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 240px;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+    > div {
+      width: 100%;
+      > div {
+        width: 50%;
+      }
+    }
+  }
+}
+
+/*banka için*/
+@media all and (max-width: 1040px) {
+  .tanim-metin, .tanim-idler {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+  }
+  .tanim2 {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 230px;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+    > div {
+      width: 100%;
+      > div {
+        width: 50%;
+      }
+    }
+  }
+  .bank, .total-amount {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+  }
+  .all-bank {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 260px;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+    > div {
+      width: 100%;
+      > div {
+        width: 50%;
+      }
+    }
+  }
+}
+
+/* Next: as many 3-rows as possible*/
+@media all and (max-width: 560px) {
+  .tanim-metin, .tanim-idler, .amount, .bank {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+  }
+  .total-amount {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 120px;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+    > div {
+      width: 100%;
+      > div {
+        width: 50%;
+      }
+    }
+  }
+  .all-amount {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 140px;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+    > div {
+      width: 100%;
+      > div {
+        width: 50%;
+      }
+    }
+  }
+  .table-row {
+    padding: 0 2px;
+  }
+}
+
+/*banka için*/
+@media all and (max-width: 580px) {
+  .tanim-metin, .tanim-idler, .bank {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+  }
+  .total-amount {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 120px;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+    > div {
+      width: 100%;
+      > div {
+        width: 50%;
+      }
+    }
+  }
+  .all-bank {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    width: 140px;
+    div {
+      flex-grow: 0;
+      -webkit-flex-grow: 0;
+    }
+    > div {
+      width: 100%;
+      > div {
+        width: 50%;
+      }
+    }
+  }
+  .table-row {
+    padding: 0 2px;
+  }
+}
+
+/*
+ * General good-look styles
+ */
+
+.table-row {
+  border-bottom: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  padding-top: 2px;
+  &.ev-header {
+    background-color: #85bb65;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  &.ev-tr1 {
+    color: #555;
+    line-height: 30px;
+  }
+}

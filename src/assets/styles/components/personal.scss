@@ -1,0 +1,155 @@
+@charset "utf-8";
+.ev-kb-ana {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ev-kb-ana > div {
+  display: flex;
+  width: 48%;
+  min-width: 300px;
+  max-width: 800px;
+  margin: 20px 0;
+}
+
+.ev-kb-sol, .ev-kb-sag {
+  width: 100%;
+}
+
+.ev-kbf {
+  padding: 10px;
+}
+
+.ev-kbf input, .ev-kbf textarea {
+  font-size: 16px;
+}
+
+.ev-kb-sol {
+  border: 1px solid #B7D968;
+}
+
+.ev-kb-sol > div:first-child {
+  background-color: #B7D968;
+}
+
+.ev-kb-sag {
+  border: 1px solid #aaa;
+}
+
+.ev-kb-sag > div:first-child {
+  background-color: #aaa;
+}
+
+.ev-kb-sol > div:first-child, .ev-kb-sag > div:first-child {
+  text-align: center;
+  padding: 10px;
+  color: #FFF;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  font-weight: bold;
+}
+
+.ev-klbl {
+  width: 130px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.ev-kint {
+  padding: 5px 7px;
+  margin: 5px 0;
+  width: calc(100% - 180px);
+}
+
+.ev-top1 {
+  vertical-align: top;
+}
+
+.ev-kfoto {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ev-kfoto-dosya {
+  margin: 5px 10px 15px 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.ev-kfoto-dosya > input {
+  margin: 5px 0;
+}
+
+.ev-kblg {
+  padding: 10px;
+}
+
+.ev-kblg > p {
+  text-align: justify;
+  font-size: 14px;
+}
+
+.ev-kbtn {
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  background-color: #4384c1;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ev-kkyt, .ev-ksfr {
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+.ev-kgu > div:first-child {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.ev-kgu > div:last-child > p {
+  margin-bottom: 10px;
+  text-align: justify;
+  padding: 0 10px;
+}
+
+.ev-kgu > div:last-child > p > label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+@media all and (max-width: 600px) {
+  .ev-kbf input, .ev-kbf textarea {
+    font-size: 12px;
+  }
+  .ev-klbl {
+    width: 100px;
+    display: inline-block;
+    font-size: 12px;
+  }
+  .ev-kint {
+    width: calc(100% - 130px);
+  }
+  .ev-kblg > p {
+    font-size: 12px;
+  }
+  .ev-kb-ana > div {
+    width: calc(100% - 16px);
+  }
+}
+
+/*Evarlik komisyonlar  son*/

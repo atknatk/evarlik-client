@@ -1,0 +1,88 @@
+<div id="tab-one-panel" class="panel active">
+  <div class="wrapper">
+    <aside class="aside aside-1">
+      <div class="ev_c10">
+        <div><b>{{coinName}} Yatırma</b></div>
+        <div class="ev_c11">
+          <div>Cüzdan Adresiniz <span class="label"
+                                      *ngIf="walletNumber"
+                                      (click)="copyToClipboard()"
+                                      style="cursor: pointer">Kopyala</span></div>
+          <div [style.display]="walletNumber ? 'initial':'none'">
+            <div id="qrcode" class="ev_c21"></div>
+            <div class="ev_c23">
+              <b class="wallet-numbers" *ngFor="let ws of walletNumberArr">{{ws}}</b>
+              <img style="width: 20px;height: 20px;cursor: pointer"
+                   (click)="copyToClipboard()"
+                   title="Kopyala"
+                   src="https://www.materialui.co/materialIcons/content/content_copy_grey_192x192.png">
+            </div>
+          </div>
+
+          <div *ngIf="isCreateWallet" style="text-align: center">
+            <button class="btn"
+                    (click)="createWallet()"
+                    style="height: 38px">Cüzdan Oluştur
+            </button>
+          </div>
+
+        </div>
+        <div class="ev_c31"></div>
+        <div (click)="fromToWallet(walletInput.value)" class="ev_c41 pointer">
+          <div>GELEN TRANSFER KONTROL ET</div>
+        </div>
+      </div>
+    </aside>
+    <aside class="aside aside-2">
+      <div class="ev_d10">
+        <div><b>{{coinName}} Gönder</b></div>
+        <div class="ev_d11" [formGroup]="toTransferForm">
+          <div>
+            <label>Toplam Bakiye</label><span>{{getCoinValue()}}</span><b>&nbsp;{{coinShortName}}</b>
+            <div (click)="allAmount()"
+                 style="cursor: pointer">Hepsi
+            </div>
+          </div>
+          <div class="ev_d21">
+            <div>
+              <input name="transfer_adres"
+                     formControlName="wallet"
+                     #walletInput
+                     placeholder="Cüzdan numarası giriniz" type="text">
+            </div>
+          </div>
+          <div class="ev_d22">
+            <div>
+              <div>Miktar</div>
+              <input name="transfer_tutar"
+                     formControlName="amount"
+                     evCurrency="true"
+                     #amountInput
+                     style="text-align: right"
+                     (focus)="inputFocusClick($event)"
+                     (blur)="inputBlurClick($event)"
+                     class="sayi_kutusu"
+                     placeholder="Gönderilecek Tutar Giriniz" type="text">
+              <div>{{coinShortName}}</div>
+            </div>
+          </div>
+          <div class="ev_d23">
+            <div>
+              <div><label>Transfer Ücreti Tutarı</label><span>{{commision}}</span><b>{{coinShortName}}</b></div>
+              <div><label>Hesaba Geçecek Tutar</label><span><div>{{(amountInput.value -commision) | evCurrency}}</div></span><b>{{coinShortName}}</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ev_d31"></div>
+        <div (click)="onToWallet(walletInput.value,amountInput.value)" class="ev_d41 pointer">
+          <div>TRANSFER ET</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <hr>
+  <div>
+    <ev-transaction-log #tlog type="wallet" [coinShortName]="coinShortName" [transferCommission]="commision"></ev-transaction-log>
+  </div>
+</div>

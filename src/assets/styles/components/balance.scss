@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/**/
+/*Evarlik komisyonlar  baslangic #FF9C00*/
+.ev_p10 > div:first-child, .ev_d10 > div:first-child {
+  margin: 15px 0 5px 0;
+  line-height: 28px;
+  font-size: 18px;
+}
+
+.ev_p11 {
+  margin-bottom: 20px;
+}
+
+.tl_cek {
+  border: 1px solid #aa3311;
+}
+
+.tl_yatir {
+  border: 1px solid #B7D968;
+}
+
+.tl_cek > div:first-child {
+  background-color: #aa3311;
+}
+
+.tl_yatir > div:first-child {
+  background-color: #B7D968;
+}
+
+.ev_p11 > div:first-child {
+  text-align: center;
+  padding: 10px;
+  color: #FFF;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  font-weight: bold;
+}
+
+.ev_p21 {
+ height: 36px;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+}
+
+.ev_p23 {
+  padding: 5px 5px 15px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ev_p23 > b {
+  margin: 0 3px;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  color: #5994A9;
+}
+
+.ev_p23 > b:nth-child(odd) {
+  color: #555E7B;
+}
+
+.ev_p22 {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.ev_c31, .ev_d31 {
+  min-height: 50px;
+  padding: 5px
+}
+
+.ev_p41 > div, .ev_d41 > div {
+  padding: 5px;
+  background-color: #4384c1;
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.ev_d22 {
+  padding: 5px;
+}
+
+.ev_d22 > div {
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.ev_d22 > div > div {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.ev_d22 > div > div:first-child {
+  padding: 5px 8px;
+  background-color: #ccc;
+}
+
+.ev_d22 > div > div:last-child {
+  float: right;
+  padding: 5px 8px;
+  background-color: #ccc;
+}
+
+.ev_d22 > div > input {
+  border: 0;
+  width: calc(100% - 120px);
+  outline: none;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555;
+}
+
+.ev_d23 {
+}
+
+.ev_p31 {
+  display: table;
+  border-collapse: collapse;
+  width: calc(100% - 12px);
+  margin: 10px 5px;
+}
+
+.ev_p31 > div {
+  display: table-row;
+}
+
+.ev_p31 > div > div {
+  display: table-cell;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.ev_p31 > div > div:first-child {
+  width: 25%;
+}
+
+.ev_p31 > div > div:last-child {
+  width: 75%;
+}
+
+@media all and (min-width: 600px) {
+
+}
+
+/*Evarlik komisyonlar  son*/

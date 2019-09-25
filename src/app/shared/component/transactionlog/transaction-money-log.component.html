@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="table-row ev-header"> <!-- başlık  başlanğıç -->
+
+    <div class="ev-wrapper tanim2">
+      <div class="ev-wrapper tanim-metin">
+        <div class="column module1">İşlem Adı</div>
+        <div class="column module2">Durum</div>
+      </div>
+      <div class="ev-wrapper tanim-idler">
+        <div class="column module3">Pin</div>
+        <div class="column module4">Tarih</div>
+      </div>
+    </div>
+
+    <div class="ev-wrapper all-bank">
+      <div class="ev-wrapper bank">
+        <div class="column module9">Alıcı IBAN</div>
+        <div class="column module10">Gönderen IBAN</div>
+      </div>
+      <div class="ev-wrapper total-amount">
+        <div class="column module7">Komisyon</div>
+        <div class="column module8">Toplam Tutar</div>
+      </div>
+    </div>
+
+    <div class="column iptal">İptal</div>
+
+  </div> <!-- başlık  son -->
+
+  <div *ngFor="let order of orders" class="table-row ev-tr1"> <!-- örnek  data başlanğıç -->
+
+    <div class="ev-wrapper tanim2">
+      <div class="ev-wrapper tanim-metin">
+        <div class="column module1">{{getTransactionType(order.idTransactionType)}}</div>
+        <div class="column module2">{{getTransactionState(order.idTransactionState)}}</div>
+      </div>
+      <div class="ev-wrapper tanim-idler">
+        <div class="column module3">{{order.userCoinTransactionOrderGuid}}</div>
+        <div class="column module4">{{getDate(order.createdAt)}}</div>
+      </div>
+    </div>
+    <div class="ev-wrapper all-bank">
+      <div class="ev-wrapper bank">
+        <div class="column module9">{{getIban1(order.idTransactionType,order.iban)}}</div>
+        <div class="column module10">{{getIban2(order.idTransactionType,order.iban)}}</div>
+      </div>
+      <div class="ev-wrapper total-amount">
+        <div class="column module7">{{getCommision(order.commission)}}</div>
+        <div class="column module8">{{getDataTotal(order.coinUnitPrice , order.coinAmount,
+          order.moneyAmount,order.idTransactionType)}}
+        </div>
+      </div>
+    </div>
+    <div class="column iptal">
+      <span class="pointer label label-danger" *ngIf="!isCompeted(order.idTransactionState)"
+            (click)="cancelOrder(order.id,order.idTransactionState)">İptal</span>
+    </div>
+
+  </div>  <!-- örnek  data son -->
+</div>

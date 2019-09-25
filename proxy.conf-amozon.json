@@ -1,0 +1,23 @@
+{
+  "/api": {
+    "target": "http://evarlik-test.us-east-2.elasticbeanstalk.com/api",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/signalr": {
+    "target": "http://evarlik-test.us-east-2.elasticbeanstalk.com/signalr",
+    "secure": false,
+    "pathRewrite": {
+      "^/signalr": ""
+    }
+  },
+  "/googlebucket/api": {
+    "target": "http://130.211.197.103/api",
+    "secure": false,
+    "pathRewrite": {
+      "^/googlebucket/api": ""
+    }
+  }
+}

@@ -1,0 +1,32 @@
+
+#layout-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.ev-footer {
+  background: none repeat scroll 0 0 white;
+  border-top: 1px solid $border-color;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  position: absolute;
+  right: 0;
+}
+
+
+#page-wrapper {
+  position: inherit;
+  margin: 0 0 0 0;
+  min-height: 100vh;
+}
+
+
+/*
+.b13g {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none;
+}*/

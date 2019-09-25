@@ -1,0 +1,116 @@
+<div id="tab-one-panel" class="panel active">
+  <div class="wrapper">
+    <aside class="aside aside-1">
+      <div class="ev_p10">
+        <div><b>Evarlık Hesabınıza TL Yatırın</b></div>
+        <div class="ev_p11 tl_yatir">
+          <div>TL YATIRMA İŞLEMİ</div>
+          <div class="ev_p21">
+            <!-- qr kare kod -->
+            <div>
+              <label for="banka_1">
+                <span>KUVEYT TÜRK BANKASI</span>
+              </label>
+            </div>
+          </div>
+          <div class="ev_d22">
+            <div>
+              <div>Miktar</div>
+              <input name="tl_yatir_tutar"
+                     value="0"
+                     #fromBank
+                     (focus)="inputFocusClick($event)"
+                     (blur)="inputBlurClick($event)"style="text-align: right"
+                     class="sayi_kutusu"
+                     id="para-yatir"
+                     placeholder="Yatıracağınız Tutarı Giriniz" type="text">
+              <div>TL</div>
+            </div>
+          </div>
+          <div class="ev_p31">
+            <div>
+              <div>Alıcı İsmi</div>
+              <div>KOBİP BİLİŞİM ANONİM ŞİRKETİ</div>
+            </div>
+            <div>
+              <div>IBAN No</div>
+              <div>TR36 0020 5000 0948 3960 6000 01</div>
+            </div>
+            <div>
+              <div>TL Tutar</div>
+              <div>{{fromBank.value}} TL</div>
+            </div>
+            <div>
+              <div>Referans Pin</div>
+              <div *ngIf="bankOrderPin">{{bankOrderPin}}</div>
+              <div *ngIf="!bankOrderPin">*Otomatik Oluşturulacak</div>
+            </div>
+          </div>
+          <div class="ev_p22">
+            <span>PIN kodunu yazmanız paranızın hesabınıza hızlıca aktarılmasını sağlar. PIN kodu olmayan transferlerin hesabınıza yansıması bir kaç gün sürebilir.</span>
+            <br>
+            <span>TL Yatıma için işlem ücreti yoktur</span>
+          </div>
+        </div>
+
+        <div (click)="onFromBank(fromBank.value)" class="ev_p41 pointer">
+          <div>TL YATIR</div>
+        </div>
+      </div>
+    </aside>
+    <aside class="aside aside-2">
+      <div class="ev_d10">
+        <div><b>Banka Hesabınıza TL Çekme</b></div>
+        <div class="ev_p11 tl_cek">
+          <div>TL ÇEKME İŞLEMİ</div>
+          <div class="ev_p21">
+            <!-- qr kare kod -->
+            <div><label><span>{{user.bankName}}</span></label></div>
+          </div>
+          <div class="ev_d22">
+            <div>
+              <div>Miktar</div>
+              <input name="tl_yatir_tutar"
+                     value="0"
+                     #toBank
+                     style="text-align: right"
+                     (focus)="inputFocusClick($event)"
+                     (blur)="inputBlurClick($event)"id="para-cek"
+                     class="sayi_kutusu"
+                     placeholder="Göndereceğiniz Tutarı Giriniz" type="text">
+              <div>TL</div>
+            </div>
+          </div>
+          <div class="ev_p31">
+            <div>
+              <div>Alıcı İsmi</div>
+              <div>{{user.name}} {{user.surname}}</div>
+            </div>
+            <div>
+              <div>IBAN No</div>
+              <div>{{user.iban}}</div>
+            </div>
+            <div>
+              <div>İşlem Ücreti</div>
+              <div>2.50 TL</div>
+            </div>
+            <div>
+              <div>TL Tutar</div>
+              <div>{{(toBank.value -2.50)}} TL</div>
+            </div>
+
+          </div>
+          <div class="ev_p22"><span>TL Çekme için 2.50TL işlem ücreti vadır</span></div>
+        </div>
+
+        <div (click)="onToBank(toBank.value)" class="ev_p41 pointer">
+          <div>TL ÇEK</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <hr>
+  <div>
+    <ev-transaction-log #tlog type="bank"></ev-transaction-log>
+  </div>
+</div>

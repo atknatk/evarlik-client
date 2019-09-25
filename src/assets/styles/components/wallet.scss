@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+/**/
+/*Evarlik komisyonlar  baslangic #FF9C00*/
+.ev_c10 > div:first-child, .ev_d10 > div:first-child {
+  margin: 15px 0 5px 0;
+  line-height: 28px;
+  font-size: 18px;
+}
+
+.ev_c11, .ev_d11 {
+  height: 320px;
+}
+
+.ev_c11 {
+  border: 1px solid #B7D968;
+}
+
+.ev_c11 > div:first-child {
+  text-align: center;
+  padding: 10px;
+  color: #FFF;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  font-weight: bold;
+  background-color: #B7D968;
+}
+
+.ev_c21 {
+  text-align: center;
+  padding: 10px;
+}
+
+.ev_c22 {
+  padding: 5px;
+}
+
+.ev_c22 > div {
+  padding: 4px 5px 4px 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.ev_c22 > div > span {
+  word-wrap: break-word;
+  margin-right: 5px;
+  white-space: normal;
+}
+
+.ev_c22 > div > div {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 4px;
+  background-color: #4384c1;
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.ev_c23 {
+  padding: 5px 5px 15px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ev_c23 > b {
+  margin: 0 3px;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  color: #5994A9;
+}
+
+.ev_c23 > b:nth-child(odd) {
+  color: #555E7B;
+}
+
+.ev_c31, .ev_d31 {
+  min-height: 50px;
+  padding: 5px;
+}
+
+.ev_c41 > div, .ev_d41 > div {
+  padding: 5px;
+  background-color: #4384c1;
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.ev_d11 {
+  border: 1px solid #c3a634;
+}
+
+.ev_d11 > div:first-child {
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  font-weight: bold;
+  background-color: #c3a634;
+}
+
+.ev_d11 > div:first-child > div {
+  display: inline-block;
+  float: right;
+  background-color: #fff;
+  color: #aaa;
+  padding: 2px 4px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.ev_d11 > div:first-child > label {
+  margin-right: 5px;
+}
+
+.ev_d21, .ev_d22, .ev_d23 {
+  padding: 5px;
+}
+
+.ev_d21 > div {
+  border: 1px solid #ccc;
+  margin: 30px 0 15px 0;
+}
+
+.ev_d21 > div > input {
+  border: 0;
+  width: calc(100% - 20px);
+  outline: none;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555;
+}
+
+.ev_d22 > div {
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.ev_d22 > div > div {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.ev_d22 > div > div:first-child {
+  padding: 5px 8px;
+  background-color: #ccc;
+}
+
+.ev_d22 > div > div:last-child {
+  float: right;
+  padding: 5px 8px;
+  background-color: #ccc;
+}
+
+.ev_d22 > div > input {
+  border: 0;
+  width: calc(100% - 120px);
+  outline: none;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555;
+}
+
+.ev_d23 {
+}
+
+.ev_d23 > div {
+  display: table;
+}
+
+.ev_d23 > div > div {
+  display: table-row;
+  font-size: 16px;
+  color: #1C75BC;
+}
+
+.ev_d23 > div > div > label {
+  display: table-cell;
+}
+
+.ev_d23 > div > div > span {
+  display: table-cell;
+  text-align: right;
+  color: #333;
+  padding-left: 15px;
+}
+
+.ev_d23 > div > div > b {
+  margin-left: 4px;
+}
+
+.ev_d23 > div > div:last-child > span > div {
+  line-height: 40px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+/*border-radius:8px; border:1px solid #ccc;*/
+
+@media all and (min-width: 600px) {
+
+}
+
+/*Evarlik komisyonlar  son*/

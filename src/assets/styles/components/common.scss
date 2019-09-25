@@ -1,0 +1,188 @@
+@charset "utf-8";
+html {
+  overflow-y: scroll;
+}
+
+/**/
+body {
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background-color: #fbfbfb;
+}
+
+._g {
+  display: none;
+}
+
+._g0 {
+  visibility: hidden;
+}
+
+._g1 {
+  clear: both;
+}
+
+._g2 {
+  /*Metin seçimini engelliyor*/
+  -ms-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+._g4 {
+  /*  Textbox genel durumu */
+  color: #525252;
+  height: 18px;
+  vertical-align: top;
+  padding: 5px 3px;
+  border: 1px solid #7a7a7a;
+}
+
+._g5 {
+  position: absolute !important;
+}
+
+._g6 {
+  cursor: hand;
+  cursor: pointer;
+}
+
+/*yandaki gibi g1#a lar bş bırakılmıştır genel js yazmak için Satinalma genel sayfasında*/
+
+.g10b, .g11b, .g12b {
+  width: 365px;
+}
+
+.g11b {
+  display: none;
+}
+
+.g12b {
+  display: none;
+  margin: 5px 0 0 0;
+}
+
+.g13b {
+  height: 68px;
+  margin: 5px 0 0 0;
+}
+
+.g14b li {
+  display: inline-block;
+  width: 360px;
+  list-style-type: none;
+  margin: 3px 0 3px 0;
+  padding: 2px;
+}
+
+.g14b li span {
+  width: 345px;
+  display: inline-block;
+  font-size: small;
+  color: #a2a2a2;
+}
+
+.g14b li:hover {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+.g14b li label {
+  font-weight: bold;
+  color: firebrick;
+  display: inline-block;
+  cursor: hand;
+  cursor: pointer;
+  vertical-align: top;
+  line-height: 14px;
+}
+
+.g14b li label:hover {
+  color: red;
+}
+
+.g20b {
+  display: none;
+  margin: 2px;
+  padding: 0 5px 2px 5px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 22px;
+  background-color: #71a2d1;
+  border-radius: 2px;
+}
+
+.g20b i {
+  color: #ddd;
+  margin: 0 2px 0 4px;
+  font-style: normal;
+}
+
+.g20b b {
+  color: #fff;
+  margin: 0 4px 0 2px;
+  font-weight: normal;
+}
+
+.g20b div {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.g20b div:hover {
+  cursor: pointer;
+  cursor: hand;
+  color: red;
+}
+
+.btn {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 18px;
+  height: 28px;
+  width: inherit;
+  color: #fff;
+  font-weight: bold;
+  background-color: #4384c1;
+  border: 0;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px 0 0 0;
+}
+
+.label-danger {
+  background-color: #d9534f !important;
+  color: white !important;
+}
+
+.label {
+  background-color: #d1dade;
+  color: #5e5e5e;
+  font-weight: 600;
+  padding: 3px 8px;
+  text-shadow: none;
+  display: inline;
+  font-size: 75%;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+
+}
+
+
+.pointer {
+  cursor: pointer;
+}

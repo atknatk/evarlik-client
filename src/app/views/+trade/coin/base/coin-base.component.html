@@ -1,0 +1,161 @@
+<div id="trade-coin-panel" class="panel active">
+  <div class="wrapper">
+    <article class="main">
+      <!--<div class="varliklar_ozet">
+        <div><span>Varlıklarınız:</span><b>{{varlik}} TL</b></div>
+      </div>-->
+      <div class="i10b">
+        <div class="i10c">
+          <li><a class="i11c ">Emir Girişi</a></li>
+          <!--<li><a class="i11c i12c" onclick="alert('Teslimat');">Varlık Analizi</a></li>-->
+        </div>
+        <hr>
+
+        <!-- Satış/Alış Tabı  -->
+        <div id="z2" class="i11e">
+          <div class="alsat_tab">
+            <div [formGroup]="purchasingOrderForm">
+              <div style="cursor: pointer"
+                   (click)="selectPurchasingAllBalance()">
+                <label>{{coinName}} Alış</label><span>Bakiye: <b>{{moneyBalance | evCurrency}} </b>TL</span>
+              </div>
+              <div>
+                <label>Fiyat</label>
+                <div>
+                  <!--<i [ngClass]="lock.purchasingUnitPrice ? 'kilit_kapali' : 'kilit_acik' "
+                     (click)="toggleLock('purchasingUnitPrice')"
+                     class="_i"></i>-->
+                  <input formControlName="coinUnitPrice"
+                         (blur)="inputBlurClick($event)"
+                         (focus)="inputFocusClick($event)"
+                         class="sayi_kutusu">
+                  <label>TL</label>
+                </div>
+              </div>
+              <div><label>Miktar</label>
+                <div>
+                  <input formControlName="coinAmount"
+                         (blur)="inputBlurClick($event)"
+                         (focus)="inputFocusClick($event)"
+                         class="sayi_kutusu"><label>{{coinShortName}}</label></div>
+              </div>
+              <div>
+                <label>Toplam Tutar</label>
+                <div>
+                  <!-- <i [ngClass]="lock.purchasingTotalPrice ? 'kilit_kapali' : 'kilit_acik' "
+                      (click)="toggleLock('purchasingTotalPrice')"
+                      class="_i"></i>-->
+                  <input formControlName="totalAmount"
+                         disabled
+                         (blur)="inputBlurClick($event)"
+                         (focus)="inputFocusClick($event)"
+                         class="sayi_kutusu"
+                         style="background-color: rgb(235, 235, 228);">
+                  <label style="background-color: rgb(235, 235, 228);">TL</label>
+                </div>
+              </div>
+              <div>
+                <div (click)="purchasingOrder()">{{coinName}} Alım Emri Ver</div>
+              </div>
+            </div>
+            <div [formGroup]="salesOrderForm">
+              <div (click)="selectSalesAllCoin()"
+                   style="cursor: pointer"><label>{{coinName}} Satış</label><span>Bakiye: <b>{{getCoinValue() | evCurrency}} </b>
+                {{coinShortName}}</span>
+              </div>
+              <div><label>Fiyat</label>
+                <div>
+                  <!-- <i [ngClass]="lock.salesUnitPrice? 'kilit_kapali' : 'kilit_acik' "
+                      (click)="toggleLock('salesUnitPrice')"
+                      class="_i"></i>-->
+                  <input formControlName="coinUnitPrice"
+                         (blur)="inputBlurClick($event)"
+                         (focus)="inputFocusClick($event)"
+                         class="sayi_kutusu"><label>TL</label></div>
+              </div>
+              <div><label>Miktar</label>
+                <div>
+                  <!-- <i [ngClass]="lock.salesTotalPrice ? 'kilit_kapali' : 'kilit_acik' "
+                      (click)="toggleLock('salesTotalPrice')"
+                      class="_i"></i>-->
+                  <input (blur)="inputBlurClick($event)"
+                         (focus)="inputFocusClick($event)"
+                         formControlName="coinAmount"
+                         class="sayi_kutusu"
+                  ><label>{{coinShortName}}</label></div>
+              </div>
+              <div><label>Toplam Tutar</label>
+                <div>
+                  <input disabled
+                         formControlName="totalAmount" style="background-color: rgb(235, 235, 228);"
+                         class="sayi_kutusu">
+                  <label style="background-color: rgb(235, 235, 228);">TL</label>
+                </div>
+              </div>
+              <div>
+                <div (click)="salesOrder()">{{coinName}} Satış Emri Ver</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Satış/Alış Tabı Son-->
+      </div>
+
+      <!--    <div class="grafik_menu"><b>Karşılaştırma Yap</b>
+            <div>
+              <i class="_i btc"></i>
+              <i class="_i dogec"></i>
+              <i class="_i ether"></i>
+              <i class="_i dash"></i>
+            </div>
+          </div>-->
+      <!--<img style="width: 100%; height: auto;" src="gorsel/grafik.png">-->
+      <ev-history-chart [coinShortName]="coinShortName"></ev-history-chart>
+    </article>
+    <aside class="aside aside-1">
+      <div class="alsat">
+        <div><b>{{coinName}} Satış Emirleri</b></div>
+        <div>
+          <div>B. Fiyat</div>
+          <div>Miktar</div>
+          <div>Toplam</div>
+        </div>
+        <div class="alsat_tablo">
+          <div *ngFor="let order of salesOrderList"
+               class="pointer"
+               [@growShrinkStaticStart]="animationInitialized.toString()"
+               (@growShrinkStaticStart.done)="animationInitialized = true"
+               (click)="onSalesOrderTable(order)">
+            <div>{{order.coinUnitPrice | evCurrency}}</div>
+            <div>{{order.coinAmount | evCurrency}}
+            </div>
+            <div>{{multiply(order.coinUnitPrice , order.coinAmount )| evCurrency}}</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <aside class="aside aside-2">
+      <div class="alsat">
+        <div><b>{{coinName}} Alış Emirleri</b></div>
+        <div>
+          <div>B. Fiyat</div>
+          <div>Miktar</div>
+          <div>Toplam</div>
+        </div>
+        <div class="alsat_tablo">
+          <div *ngFor="let order of purchasingOrderList"
+               class="pointer"
+               [@growShrinkStaticStart]="animationInitialized.toString()"
+               (@growShrinkStaticStart.done)="animationInitialized = true"
+               (click)="onPurchasingOrderTable(order )">
+            <div>{{order.coinUnitPrice | evCurrency}}</div>
+            <div>{{order.coinAmount | evCurrency}}</div>
+            <div>{{multiply(order.coinUnitPrice ,order.coinAmount )| evCurrency}}</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <ev-transaction-log #tlog type="coin" [coinShortName]="coinShortName"></ev-transaction-log>
+</div>

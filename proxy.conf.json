@@ -1,0 +1,43 @@
+{
+  "/api": {
+    "target": "http://evarlik-test.us-east-2.elasticbeanstalk.com/api",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/signalr": {
+    "target": "http://evarlik-test.us-east-2.elasticbeanstalk.com/signalr",
+    "secure": false,
+    "pathRewrite": {
+      "^/signalr": ""
+    }
+  },
+  "/kobipChatHub": {
+    "target": "http://localhost:53431/kobipChatHub",
+    "secure": false,
+    "pathRewrite": {
+      "^/kobipChatHub": ""
+    }
+  },
+  "/googlebucket/api": {
+    "target": "http://localhost:60612/api",
+    "secure": false,
+    "pathRewrite": {
+      "^/googlebucket/api": ""
+    }
+  },
+  "ws://*/signalr": {
+    "target": "ws://evarlik-test.us-east-2.elasticbeanstalk.com/signalr",
+    "ws": true,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/signalr": ""
+    },
+    "headers": {
+      "host": "https://evarlik-test.us-east-2.elasticbeanstalk.com",
+      "referer": "https://evarlik-test.us-east-2.elasticbeanstalk.com"
+    }
+  }
+}

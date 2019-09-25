@@ -1,0 +1,343 @@
+<div class="main-login" style="min-height: calc(100vh - 80px);">
+  <div class="liste">
+    <div class="ust_bant_ortalama">
+      <div class="login-logo">
+        <div><img src="assets/img/icons/logo_64_64.png"></div>
+        <div><a routerLink="/">EVARLIK</a>
+          <div>Kripto Para Borsası</div>
+        </div>
+      </div>
+      <!-- logo son -->
+      <!-- menu baslangic -->
+
+      <div class="ust_menu">
+        <a *ngIf="authType == 'login'"
+           href="javascript:void(0)"
+           (click)="authType = 'register'"
+           title="Ücretsiz Kayıt Yaptırın">Ücretsiz Kaydol</a>
+        <a *ngIf="authType == 'register' || authType == 'remember'"
+           href="javascript:void(0)"
+           (click)="authType = 'login'"
+           title="Uygulamaya Giriş Yapınız">Giriş</a>
+        <a routerLink="/support" title="Destek">Destek</a>
+      </div>
+      <!--menu son -->
+
+    </div><!-- ust_bant_ortalama kapanış -->
+
+  </div>
+  <div class="sol"></div>
+  <div class="sag"></div>
+  <div class="login-kese">
+    <div class="anasayfa_giris_panel">
+      <div><!--  tanıtım başlanğıç -->
+        <div class="duyur"><h1>Dijital Para Alma Fırsatını Kaçırmayın</h1>
+          <ul>
+            <li><img src="assets/img/icons/btc.svg" alt="BTC"></li>
+            <li><img src="assets/img/icons/ltc.svg" alt="LTC"></li>
+            <li><img src="assets/img/icons/xrp.svg" alt="RIPPLE"></li>
+            <li><img src="assets/img/icons/miota.svg" alt="IOTA"></li>
+            <li><img src="assets/img/icons/doge.svg" alt="DOGE"></li>
+          </ul>
+          <p>Bitcoin, Litecoin, Ripple, IOTA ve DOGE</p><span>Türk Lirası ile dijital para birimlerini güvenle satın alabilir ve satabilirsiniz. </span>
+        </div>
+      </div>  <!-- tanıtım son -->
+      <div>  <!-- giris baslangic -->
+        <div *ngIf="authType == 'register'" class="kayit">
+          <h3>Hemen Ücretsiz Kayıt Ol</h3>
+          <hr>
+          <form class="kayit_form" (submit)="register()" id="kayit" [formGroup]="registerForm">
+            <div class="f_tip" style="width: 48%;float: left;margin-right: 2%;">
+              <input type="text"
+                     class="kayit_isim"
+                     name="kayit_isim"
+                     formControlName='name'
+                     placeholder="Ad Giriniz">
+            </div>
+            <div class="f_tip" style="width: 48%;float: left;margin-left: 2%;">
+              <input type="text"
+                     class="kayit_isim"
+                     formControlName='surname'
+                     name="kayit_isim"
+                     placeholder="Soyad Giriniz">
+            </div>
+            <div class="f_tip">
+              <input type="text"
+                     class="kayit_eposta"
+                     name="kayit_eposta"
+                     email
+                     formControlName="mail"
+                     placeholder="Email Adresi Giriniz">
+            </div>
+            <div class="f_tip">
+              <input type="text"
+                     id="register-phone"
+                     class="kayit_cep"
+                     name="kayit_cep"
+                     formControlName="phone"
+                     placeholder="Cep Telefon Numaranızı Giriniz">
+            </div>
+            <div class="f_tip">
+              <input type="password"
+                     name="current-password"
+                     formControlName="password"
+                     placeholder="Şifrenizi Giriniz">
+            </div>
+            <div class="f_tip">
+              <input type="password"
+                     name="password_repeat"
+                     formControlName="confirmPassword"
+                     placeholder="Şifrenizi Tekrar Giriniz">
+            </div>
+            <div class="f_tip k_sozlesme" style="display: flex;">
+              <input type="checkbox"
+                     name="checkbox"
+                     formControlName="sozlesme"
+                     id="kayit_sozlesme">
+              <label for="kayit_sozlesme">Sözleşmeyi Kabul Ediyorum</label>
+              <span>(<a href="assets/data/Evarlik_kullanici_sozlesmesi_s_1_0.pdf" target="_blank">Görüntüle</a>)</span>
+            </div>
+            <hr>
+            <div class="f_tip">
+              <button type="submit"
+                      style="width: 100%;" name="giris_dgm">HESAP OLUŞTUR
+              </button>
+            </div>
+          </form>
+        </div>
+        <div *ngIf="authType == 'login'" class="login-giris">
+          <a (click)="authType = 'remember'" class="giris_unuttum">Şifremi Unuttum</a>
+          <h3>Giriş</h3>
+          <hr>
+          <form class="giris_form" (submit)="login()" [formGroup]="loginForm" id="giris">
+            <div class="f_tip">
+              <input type="text"
+                     class="giris_eposta"
+                     name="giris_eposta"
+                     formControlName="mail"
+                     placeholder="Email Adresi Giriniz">
+            </div>
+            <div class="f_tip">
+              <input type="password"
+                     name="current-password"
+                     formControlName="password"
+                     placeholder="Şifrenizi Girin">
+            </div>
+            <hr>
+            <div class="f_tip">
+              <button type="submit" name="giris_dgm">GİRİŞ YAP</button>
+            </div>
+          </form>
+          <!--
+             <form class="sifre_unut" method="post">
+             <div class="f_sifre_unut">Şifrenizi sıfırlamak için Eposta adresinizi giriniz</div>
+             <input type="email" class="sifre_email_giris" name="sifre_email_giris"  placeholder="Eposta Adresi" required />
+             <button type="submit" name="yeni_sifre" >Şifremi Sıfırla</button>
+             <div class="sifre_unut_div"><label><</label><a class="giris_goster">Giriş yapmak istiyorum</a></div>
+             </form>
+               -->
+          <div>
+            <a (click)="authType='register'" style="text-align: center;float: none;" class="giris_goster">Ücretsiz
+              Kayıt Ol</a>
+          </div>
+        </div>
+        <div *ngIf="authType == 'remember'" class="login-giris">
+          <h3 class="sifre_m">Şifre Yenileme</h3>
+          <hr>
+          <form class="sifre_unut" (submit)="remember()" [formGroup]="rememberForm">
+            <div class="f_sifre_unut">Şifrenizi sıfırlamak için Eposta adresinizi giriniz</div>
+            <input type="email"
+                   class="sifre_email_giris"
+                   formControlName="mail"
+                   name="sifre_email_giris"
+                   placeholder="Eposta Adresi"/>
+            <button style="width: 100%"
+                    type="submit" name="yeni_sifre">Şifremi Sıfırla
+            </button>
+            <div class="sifre_unut_div">
+              <a (click)="authType='login'" class="giris_goster">Giriş Yap</a>
+            </div>
+            <div>
+              <a class="giris_goster"
+                 style="float: left"
+                 (click)="authType = 'register'">Ücretsiz Kayıt Ol</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div> <!-- giris son -->
+  </div>
+  <div class="coin_anasayfa_fiyat">
+    <div>
+      <div>
+        <div><img src="assets/img/icons/btc.svg" alt="BTC"><span>Bitcoin - BTC</span><label>%{{btc.ratio}}</label></div>
+        <div><span>{{btc.coinUnitPrice}} TL</span><i><img [src]="getIncreaseSvg(btc.isIncreasing)"></i></div>
+      </div>
+      <div>
+        <div><img src="assets/img/icons/ltc.svg" alt="LTC"><span>Litecoin - LTC</span><label>%{{ltc.ratio}}</label>
+        </div>
+        <div><span>{{ltc.coinUnitPrice}} TL</span><i><img [src]="getIncreaseSvg(ltc.isIncreasing)"></i></div>
+      </div>
+      <div>
+        <div><img src="assets/img/icons/miota.svg" alt="IOTA"><span>IOTA - MIOTA</span><label>%{{iota.ratio}}</label>
+        </div>
+        <div><span>{{iota.coinUnitPrice}} TL</span><i><img [src]="getIncreaseSvg(iota.isIncreasing)"></i></div>
+      </div>
+      <div>
+        <div><img src="assets/img/icons/xrp.svg" alt="RIPPLE"><span>Ripple - XRP</span><label>%{{xrp.ratio}}</label>
+        </div>
+        <div><span>{{xrp.coinUnitPrice}} TL</span><i><img [src]="getIncreaseSvg(xrp.isIncreasing)"></i></div>
+      </div>
+      <div>
+        <div><img src="assets/img/icons/doge.svg" alt="DOGE"><span>Dogecoin - DOGE</span><label>%{{doge.ratio}}</label>
+        </div>
+        <div><span>{{doge.coinUnitPrice}} TL</span><i><img [src]="getIncreaseSvg(doge.isIncreasing)"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="avntj">
+    <div>
+      <div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <defs>
+              <style>.cls-2 {
+                fill: #111;
+              }</style>
+            </defs>
+            <path class="cls-2"
+                  d="M40.52,23.75l7.57,2L50,18.17l-1.45-.38L47.3,22.55a18,18,0,1,0,.23,18.52l-1.42-.68a16.43,16.43,0,1,1,.05-16.7l-5.26-1.4Z"></path>
+            <polygon class="cls-2"
+                     points="29.58 19.77 29.58 33.4 38.38 37.68 39.06 36.3 31.11 32.48 31.11 19.77 29.58 19.77"></polygon>
+          </svg>
+        </div>
+        <div><h3>7/24 Yatırım İşlemleri</h3><span>7/24 saat kesintisiz alış/satış işlemi yapabilirsiniz</span></div>
+      </div>
+      <div>
+        <div>
+          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <defs>
+              <style>.cls-2 {
+                fill: #fff;
+              }</style>
+            </defs>
+            <path class="cls-2"
+                  d="M47.57,15.8H17.63a2.44,2.44,0,0,0-2.43,2.43v4.2A1.49,1.49,0,0,0,14,23.89v5.42a1.49,1.49,0,0,0,1.2,1.46v2.46A1.49,1.49,0,0,0,14,34.69v5.42a1.49,1.49,0,0,0,1.2,1.46v4.2a2.44,2.44,0,0,0,2.43,2.43H47.57A2.44,2.44,0,0,0,50,45.77V18.23A2.44,2.44,0,0,0,47.57,15.8ZM15.2,23.89a.29.29,0,0,1,.29-.29H18.8a.6.6,0,0,1,.6.6V29a.6.6,0,0,1-.6.6H15.49a.29.29,0,0,1-.29-.29Zm1.2,6.91h1.8v2.4H16.4Zm3,10.77a1.49,1.49,0,0,0,1.2-1.46V34.69a1.49,1.49,0,0,0-1.2-1.46V30.77a1.49,1.49,0,0,0,1.2-1.46V23.89a1.49,1.49,0,0,0-1.2-1.46V20H45.8V44H19.4Zm-4.2-6.88a.29.29,0,0,1,.29-.29H18.8a.6.6,0,0,1,.6.6v4.8a.6.6,0,0,1-.6.6H15.49a.29.29,0,0,1-.29-.29ZM48.8,45.77A1.23,1.23,0,0,1,47.57,47H17.63a1.23,1.23,0,0,1-1.23-1.23V41.6h1.8v3.6H47V18.8H18.2v3.6H16.4V18.23A1.23,1.23,0,0,1,17.63,17H47.57a1.23,1.23,0,0,1,1.23,1.23Z"></path>
+            <path class="cls-2"
+                  d="M35.3,26.93v0h0a7.18,7.18,0,0,0-10.14,0h0v0a7.18,7.18,0,0,0,0,10.14v0h0a7.18,7.18,0,0,0,10.14,0h0v0a7.18,7.18,0,0,0,0-10.14ZM35,32.6h1.17a6,6,0,0,1-1.33,3.19L34,35a.6.6,0,0,0-.85.85l.82.82A6,6,0,0,1,30.8,38V36.8a.6.6,0,0,0-1.2,0V38a6,6,0,0,1-3.19-1.33l.82-.82a.6.6,0,1,0-.85-.85l-.82.82a6,6,0,0,1-1.33-3.19H25.4a.6.6,0,0,0,0-1.2H24.23a6,6,0,0,1,1.33-3.19l.82.82a.6.6,0,0,0,.85-.85l-.82-.82A6,6,0,0,1,29.6,26V27.2a.6.6,0,1,0,1.2,0V26A6,6,0,0,1,34,27.36l-.82.82A.6.6,0,1,0,34,29l.82-.82a6,6,0,0,1,1.33,3.19H35a.6.6,0,0,0,0,1.2Z"></path>
+            <path class="cls-2"
+                  d="M30.2,29a3,3,0,1,0,3,3A3,3,0,0,0,30.2,29Zm0,4.8A1.8,1.8,0,1,1,32,32,1.8,1.8,0,0,1,30.2,33.8Z"></path>
+            <path class="cls-2"
+                  d="M44.6,24.8a.6.6,0,0,0-.6-.6H42.5a2.1,2.1,0,0,0-2.1,2.1V37.7a2.1,2.1,0,0,0,2.1,2.1H44a.6.6,0,0,0,0-1.2H42.5a.9.9,0,0,1-.9-.9V26.3a.9.9,0,0,1,.9-.9H44A.6.6,0,0,0,44.6,24.8Z"></path>
+            <path class="cls-2" d="M42.8,26.6V37.4a.6.6,0,0,0,1.2,0V26.6a.6.6,0,0,0-1.2,0Z"></path>
+          </svg>
+        </div>
+        <div><h3>Google Sunucuları</h3><span>Cloud ile yüksek hız, koruma ve yedekleme hizmeti vardır</span></div>
+      </div>
+      <div>
+        <div>
+          <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <defs>
+              <style>.cls-1 {
+                fill: #8ca632;
+              }
+
+              .cls-2 {
+                fill: #fff;
+              }</style>
+            </defs>
+            <path class="cls-2"
+                  d="M39.82,14h-15a2.38,2.38,0,0,0-2.38,2.38v3a.6.6,0,0,0-.6.6v.6a.6.6,0,0,0,.6.6v.6a.6.6,0,0,0-.6.6V23a.6.6,0,0,0,.6.6v.6a.6.6,0,0,0-.6.6v.6a.6.6,0,0,0,.6.6V47.62A2.38,2.38,0,0,0,24.78,50h15a2.38,2.38,0,0,0,2.38-2.38V16.38A2.38,2.38,0,0,0,39.82,14ZM23.6,18.8H41V43.4H23.6ZM41,47.62a1.18,1.18,0,0,1-1.18,1.18h-15a1.18,1.18,0,0,1-1.18-1.18v-3H41Zm-17.4-30V16.38a1.18,1.18,0,0,1,1.18-1.18h15A1.18,1.18,0,0,1,41,16.38V17.6Z"></path>
+            <path class="cls-2" d="M35,15.8H32A.6.6,0,0,0,32,17h3a.6.6,0,0,0,0-1.2Z"></path>
+            <path class="cls-2" d="M30.2,15.8h-.6a.6.6,0,0,0,0,1.2h.6a.6.6,0,0,0,0-1.2Z"></path>
+            <circle class="cls-2" cx="32.3" cy="46.7" r="1.5"></circle>
+            <path class="cls-2"
+                  d="M36.8,30.2H35.6V28.7a3.3,3.3,0,0,0-6.6,0v1.5H27.8a.6.6,0,0,0-.6.6V38a.6.6,0,0,0,.6.6h9a.6.6,0,0,0,.6-.6V30.8A.6.6,0,0,0,36.8,30.2Zm-6.6-1.5a2.1,2.1,0,0,1,4.2,0v1.5H30.2Zm6,8.7H28.4v-6h7.8Z"></path>
+          </svg>
+        </div>
+        <div><h3>Çift Aşamalı Doğrulama</h3>
+          <span>F2A doğrulama seçimi ile mobil şifre girişini zorunlu kılabilirsiniz.</span></div>
+      </div>
+      <div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <defs>
+              <style>.cls-2 {
+                fill: #111;
+              }</style>
+            </defs>
+            <g transform="scale(0.035) translate(300, 450)">
+              <path
+                d="M288.7,392.3c-24.1,0-43.6,19.6-43.6,43.6c0,24.1,19.6,43.6,43.6,43.6c24,0,43.6-19.6,43.6-43.6C332.3,411.9,312.9,392.3,288.7,392.3z M397.9,468.7c-24.1,0-43.6,19.6-43.6,43.6c0,24,19.6,43.6,43.6,43.6c24.1,0,43.6-19.6,43.6-43.6C441.5,488.2,421.9,468.7,397.9,468.7z M539.6,316c-24,0-43.6,19.6-43.6,43.6s19.6,43.6,43.6,43.6c24.1,0,43.6-19.6,43.6-43.6S563.6,316,539.6,316z M648.6,414.1c-24,0-43.6,19.6-43.6,43.6c0,24,19.6,43.6,43.6,43.6c24.1,0,43.6-19.6,43.6-43.6C692.2,433.7,672.7,414.1,648.6,414.1z M855.7,207c-24.1,0-43.6,19.6-43.6,43.6c0,24,19.6,43.6,43.6,43.6c24,0,43.6-19.6,43.6-43.6C899.4,226.5,879.8,207,855.7,207z M157.9,512.3c-24,0-43.6,19.6-43.6,43.6c0,24,19.6,43.6,43.6,43.6c24.1,0,43.6-19.6,43.6-43.6C201.5,531.8,182.1,512.3,157.9,512.3z"></path>
+              <path
+                d="M972.3,859.1c-9.7,0-17.6,7.9-17.6,17.6V922h-56.3V514.1c0-17.5-14.1-31.6-31.5-31.6h-45.1c-17.5,0-31.2,14.2-31.2,31.6V922H679.3V587.3c0-17.5-14.7-31.1-32.1-31.1H602c-17.5,0-31.8,13.6-31.8,31.1V922H458.9V660.6c0-17.5-14.1-31.6-31.5-31.6h-45.1c-17.5,0-31.2,14.2-31.2,31.6V922H239.7V733.8c0-17.5-14.7-31.1-32.1-31.1h-45.1c-17.5,0-31.8,13.6-31.8,31.1V922H45.2V78h48.4c9.7,0,17.6-7.9,17.6-17.6s-7.9-17.6-17.6-17.6H40.7C24.1,42.9,10,56.1,10,72.5v854.9c0,16.3,14.1,29.7,30.7,29.7H131h108.4h111.4h108.4h111.4h108.4h111.4h108.4h61.4c16.6,0,29.9-13.2,29.9-29.7v-50.8C989.9,867,982,859.1,972.3,859.1z M165.9,922v-184h38.7v184H165.9z M386.2,922V664.1h37.5V922H386.2z M605.4,922V591.4h38.7V922H605.4z M825.8,922V517.6h37.5V922H825.8z"></path>
+              <path d="M812.5,269l24.9,24.9L691.9,439.3L667,414.4L812.5,269z"></path>
+              <path d="M586.5,376.9l41.9,38.5l-23.8,25.9l-41.9-38.5L586.5,376.9z"></path>
+              <path d="M494.8,380.3l25.8,23.9l-81.1,87.2l-25.8-23.9L494.8,380.3z"></path>
+              <path d="M333.8,447.1l38.1,25.7l-19.7,29.2l-38.1-25.7L333.8,447.1z"></path>
+              <path d="M244.7,452.4l23.8,25.9l-66.5,61l-23.8-25.9L244.7,452.4z"></path>
+            </g>
+          </svg>
+        </div>
+        <div><h3>Anlık Market Verileri</h3><span>Anlık Alış/Satış emirlerini hızlı ve kesintisiz görebilirsiniz.</span>
+        </div>
+      </div>
+      <div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <defs></defs>
+            <g transform="scale(0.033) translate(350, 500)">
+              <g style="fill:#030104;">
+                <path
+                  d="M933.1,66.9c-11.9-11.9-31.4-11.9-43.3,0L66.9,889.8c-11.9,11.9-11.9,31.4,0,43.3c11.9,11.9,31.4,11.9,43.3,0l822.9-822.9C945,98.3,945,78.8,933.1,66.9z"></path>
+                <path
+                  d="M224.4,438.8c118.4,0,214.4-96,214.4-214.4S342.8,10,224.4,10S10,106,10,224.4S106,438.8,224.4,438.8z M224.4,71.3c84.6,0,153.1,68.5,153.1,153.1S309,377.5,224.4,377.5S71.3,309,71.3,224.4S139.8,71.3,224.4,71.3z"></path>
+                <path
+                  d="M775.6,561.3c-118.4,0-214.4,96-214.4,214.4S657.2,990,775.6,990S990,894,990,775.6S894,561.3,775.6,561.3z M775.6,928.8c-84.6,0-153.1-68.5-153.1-153.1S691,622.5,775.6,622.5S928.8,691,928.8,775.6S860.2,928.8,775.6,928.8z"></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div><h3>Düşük Komisyon Oranları</h3><span>Türkiye'de en düşük maker/taker komisyonları uygulanır.</span></div>
+      </div>
+      <div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <defs>
+              <style>.cls-2 {
+                fill: #111;
+              }</style>
+            </defs>
+            <g transform="scale(0.5) translate(10, 20)">
+              <path style="fill:#111;" d="M61.245,18.332c-1.093,0-2.087,0-2.211,0s-0.224,0.099-0.224,0.199c0,0.099,0,1.192,0,2.41v0.869
+			c0,1.217,0.994,1.838,2.211,1.838h0.447c1.217,0,2.211-0.621,2.211-1.838V20.94c0-1.217,0-2.31,0-2.41
+			c0-0.124-0.099-0.199-0.224-0.199C63.357,18.332,62.338,18.332,61.245,18.332z"></path>
+              <path style="fill:#111;" d="M56.153,17.438h10.632c0.969,0,1.764-0.795,1.764-1.764V13.91c0-0.969-0.795-1.764-1.764-1.764
+			H56.153c-0.969,0-1.764,0.795-1.764,1.764v1.764C54.389,16.643,55.184,17.438,56.153,17.438z"></path>
+              <path style="fill:#111;" d="M65.22,22.133c0,1.018-1.093,2.832-3.975,2.832s-3.975-1.987-3.975-2.832
+			c-15.004,1.962-26.605,14.78-26.605,30.331c0,16.892,13.687,30.579,30.579,30.579s30.579-13.687,30.579-30.579
+			C91.825,36.913,80.249,24.095,65.22,22.133z M61.245,76.833c-13.464,0-24.369-10.905-24.369-24.369s10.905-24.369,24.369-24.369
+			S85.614,39,85.614,52.464C85.639,65.928,74.709,76.833,61.245,76.833z"></path>
+              <path style="fill:#111;" d="M62.139,49.88V32.964h-1.317V49.88c-1.391,0.298-2.434,1.54-2.434,3.031
+			c0,1.714,1.391,3.105,3.105,3.105c1.714,0,3.105-1.391,3.105-3.105C64.574,51.421,63.531,50.178,62.139,49.88z"></path>
+              <path style="fill:#111;" d="M64.027,48.166c0,0,0.795,0.248,1.317,0.77c0.522,0.522,0.869,1.441,0.869,1.441l5.316-5.316
+			l-2.186-2.186L64.027,48.166z"></path>
+              <path style="fill:#111;" d="M3.365,51.495c0,1.217,0.994,2.211,2.211,2.211h18.979c1.217,0,2.211-0.994,2.211-2.211l0,0
+			c0-1.217-0.994-2.211-2.211-2.211H5.576C4.359,49.284,3.365,50.278,3.365,51.495L3.365,51.495z"></path>
+              <path style="fill:#111;" d="M16.68,29.337c0,1.217,0.994,2.211,2.211,2.211h13.712c1.217,0,2.211-0.994,2.211-2.211l0,0
+			c0-1.217-0.994-2.211-2.211-2.211H18.891C17.674,27.101,16.68,28.12,16.68,29.337L16.68,29.337z"></path>
+              <path style="fill:#111;" d="M16.68,73.653c0,1.217,0.994,2.211,2.211,2.211h13.712c1.217,0,2.211-0.994,2.211-2.211l0,0
+			c0-1.217-0.994-2.211-2.211-2.211H18.891C17.674,71.442,16.68,72.436,16.68,73.653L16.68,73.653z"></path>
+              <path style="fill:#111;" d="M8.259,62.798c0,1.217,0.994,2.211,2.211,2.211h16.122c1.217,0,2.211-0.994,2.211-2.211l0,0
+			c0-1.217-0.994-2.211-2.211-2.211H10.47C9.253,60.587,8.259,61.581,8.259,62.798L8.259,62.798z"></path>
+              <path style="fill:#111;" d="M8.259,40.267c0,1.217,0.994,2.211,2.211,2.211h16.122c1.217,0,2.211-0.994,2.211-2.211l0,0
+			c0-1.217-0.994-2.211-2.211-2.211H10.47C9.253,38.056,8.259,39.05,8.259,40.267L8.259,40.267z"></path>
+            </g>
+          </svg>
+        </div>
+        <div><h3>Hızlı İşlem Süresi</h3><span>Bakiye gönderme/çekme ve coin alma/gönderme hızlı geçekleşir.</span></div>
+      </div>
+    </div>
+  </div>
+</div>

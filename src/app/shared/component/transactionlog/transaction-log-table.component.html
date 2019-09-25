@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="table-row ev-header">
+    <div class="column index"></div>
+    <div class="ev-wrapper attributes">
+      <div class="ev-wrapper title-comment-module-reporter">
+        <div class="ev-wrapper title-comment">
+          <div class="column title">İşlem Adı - ID</div>
+          <div class="column comment">Durum</div>
+        </div>
+        <div class="ev-wrapper module-reporter">
+          <div class="column module">Tarih</div>
+          <!--<div class="column reporter">Tarih</div>-->
+        </div>
+      </div>
+    </div>
+
+    <div class="ev-wrapper dates">
+      <div class="column date">Miktar</div>
+      <div class="column date">Birim Fiyat</div>
+      <div class="column date">Toplam Tutar</div>
+    </div>
+  </div>
+  <div *ngFor="let order of orders" class="table-row ev-tr1">
+    <div class="column index">
+      <i (click)="cancelOrder(order.id,order.idTransactionState)"
+         [ngClass]="isCompeted(order.idTransactionState)? '_i done_all' : '_i close_gri cursor'"></i>
+    </div>
+    <div class="ev-wrapper attributes">
+      <div class="ev-wrapper title-comment-module-reporter">
+        <div class="ev-wrapper title-comment">
+          <div class="column title">{{getTransactionType(order.idTransactionType,order.userCoinTransactionOrderGuid)}}
+          </div>
+          <div class="column comment">{{getTransactionState(order.idTransactionState)}}</div>
+        </div>
+        <div class="ev-wrapper module-reporter">
+          <div class="column module">{{getDate(order.createdAt)}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="ev-wrapper dates">
+      <div class="column date">{{getDataAmount(order.coinAmount,order.idTransactionType)}}</div>
+      <div class="column date">{{getDataUnitPrice(order.coinUnitPrice,order.idTransactionType)}}</div>
+      <div class="column date">{{getDataTotal(order.coinUnitPrice , order.coinAmount,
+        order.moneyAmount,order.idTransactionType)}}
+      </div>
+    </div>
+  </div>
+</div>

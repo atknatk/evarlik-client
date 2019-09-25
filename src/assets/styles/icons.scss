@@ -1,0 +1,909 @@
+._i {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url('#{$icon-path}/ikon.svg');
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.s {
+  zoom: 75%;
+  -moz-transform: scale(0.75);
+}
+
+.m {
+  zoom: 125%;
+  -moz-transform: scale(1.25);
+}
+
+.l {
+  zoom: 260%;
+  -moz-transform: scale(2.6);
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.edit {
+  background-position: 0 0;
+}
+
+.edit:hover, .edit_gri:hover {
+  background-position: -28px 0;
+}
+
+.edit_gri {
+  background-position: -56px 0;
+}
+
+.delete {
+  background-position: -84px 0;
+}
+
+.delete:hover, .delete_gri:hover {
+  background-position: -112px 0;
+}
+
+.delete_gri {
+  background-position: -140px 0;
+}
+
+.ship_s {
+  background-position: 0 -28px;
+}
+
+.ship_d {
+  background-position: -28px -28px;
+}
+
+.ship {
+  background-position: -56px -28px;
+}
+
+.truck_s {
+  background-position: -84px -28px;
+}
+
+.truck_d {
+  background-position: -112px -28px;
+}
+
+.truck {
+  background-position: -140px -28px;
+}
+
+.plane_s {
+  background-position: 0 -56px;
+}
+
+.plane_d {
+  background-position: -28px -56px;
+}
+
+.plane {
+  background-position: -56px -56px;
+}
+
+.date {
+  background-position: -84px -56px;
+}
+
+.date:hover {
+  background-position: -112px -56px;
+}
+
+.date_gri {
+  background-position: -140px -56px;
+}
+
+.add {
+  background-position: 0 -84px;
+}
+
+.add:hover, .add_kb:hover {
+  background-position: -28px -84px;
+}
+
+.add_kb {
+  background-position: -56px -84px;
+}
+
+.close {
+  background-position: -84px -84px;
+}
+
+.close:hover, .close_gri:hover {
+  background-position: -112px -84px;
+}
+
+.close_gri {
+  background-position: -140px -84px;
+}
+
+.star {
+  background-position: 0 -112px;
+}
+
+.star_b {
+  background-position: -56px -168px;
+}
+
+.star:hover, .star_s {
+  background-position: -28px -112px;
+}
+
+.star_k {
+  background-position: -56px -112px;
+}
+
+.star_u {
+  background-position: -28px -168px;
+}
+
+.menu {
+  background-position: -84px -112px;
+}
+
+.menu:hover {
+  background-position: -112px -112px;
+}
+
+.menu_gri {
+  background-position: -140px -112px;
+}
+
+.done {
+  background-position: 0 -140px;
+}
+
+.done:hover {
+  background-position: -28px -140px;
+}
+
+.done_gri {
+  background-position: -56px -140px;
+}
+
+.visibility_off {
+  background-position: -84px -140px;
+}
+
+.goz_k {
+  background-position: -140px -140px;
+}
+
+.devlet {
+  background-position: -112px -140px;
+}
+
+/* 2 */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.align_cntr {
+  background-position: 0 -168px;
+}
+
+/*star olarak değiştirildi.*/
+
+.align_jstfy {
+  background-position: -84px -168px;
+}
+
+.align_jstfy:hover {
+  background-position: -112px -168px;
+}
+
+.align_jstfy_gri {
+  background-position: -140px -168px;
+}
+
+.bold {
+  background-position: 0 -196px;
+}
+
+.bold:hover {
+  background-position: -28px -196px;
+}
+
+.bold_gri {
+  background-position: -56px -196px;
+}
+
+.color_text {
+  background-position: -84px -196px;
+}
+
+.color_text:hover {
+  background-position: -112px -196px;
+}
+
+.color_text_gri {
+  background-position: -140px -196px;
+}
+
+.i_decrease {
+  background-position: 0 -224px;
+}
+
+.i_decrease:hover {
+  background-position: -28px -224px;
+}
+
+.i_decrease_gri {
+  background-position: -56px -224px;
+}
+
+.i_increase {
+  background-position: -84px -224px;
+}
+
+.i_increase:hover {
+  background-position: -112px -224px;
+}
+
+.i_increase_gri {
+  background-position: -140px -224px;
+}
+
+.l_bullet {
+  background-position: 0 -252px;
+}
+
+.l_bullet:hover {
+  background-position: -28px -252px;
+}
+
+.l_bullet_gri {
+  background-position: -56px -252px;
+}
+
+.l_number {
+  background-position: -84px -252px;
+}
+
+.l_number:hover {
+  background-position: -112px -252px;
+}
+
+.l_number_gri {
+  background-position: -140px -252px;
+}
+
+.email {
+  background-position: 0 -280px;
+}
+
+.email:hover {
+  background-position: -28px -280px;
+}
+
+.email_gri {
+  background-position: -56px -280px;
+}
+
+.send {
+  background-position: -84px -280px;
+}
+
+.send:hover {
+  background-position: -112px -280px;
+}
+
+.send_gri {
+  background-position: -140px -280px;
+}
+
+.settings {
+  background-position: 0 -308px;
+}
+
+.settings:hover {
+  background-position: -28px -308px;
+}
+
+.settings_gri {
+  background-position: -56px -308px;
+}
+
+.person {
+  background-position: -84px -308px;
+}
+
+.person:hover {
+  background-position: -112px -308px;
+}
+
+.person_gri {
+  background-position: -140px -311px;
+}
+
+/* 3 */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.add_photo {
+  background-position: 0 -336px;
+}
+
+.add_photo:hover {
+  background-position: -28px -336px;
+}
+
+.add_photo_gri {
+  background-position: -56px -336px;
+}
+
+.help {
+  background-position: -84px -336px;
+}
+
+.help:hover {
+  background-position: -112px -336px;
+}
+
+.help_gri {
+  background-position: -140px -336px;
+}
+
+.group {
+  background-position: 0 -364px;
+}
+
+.group:hover {
+  background-position: -28px -364px;
+}
+
+.group_gri {
+  background-position: -56px -364px;
+}
+
+.info {
+  background-position: -84px -364px;
+}
+
+.info:hover {
+  background-position: -112px -364px;
+}
+
+.info_gri {
+  background-position: -140px -364px;
+}
+
+.add_note {
+  background-position: 0 -392px;
+}
+
+.add_note:hover {
+  background-position: -28px -392px;
+}
+
+.add_note_gri {
+  background-position: -56px -392px;
+}
+
+.call {
+  background-position: -84px -392px;
+}
+
+.call:hover {
+  background-position: -112px -392px;
+}
+
+.call_gri {
+  background-position: -140px -392px;
+}
+
+.bank {
+  background-position: 0 -420px;
+}
+
+.bank:hover {
+  background-position: -28px -420px;
+}
+
+.bank_gri {
+  background-position: -56px -420px;
+}
+
+.business {
+  background-position: -84px -420px;
+}
+
+.business:hover {
+  background-position: -112px -420px;
+}
+
+.business_gri {
+  background-position: -140px -420px;
+}
+
+.chat {
+  background-position: 0 -448px;
+}
+
+.chat:hover {
+  background-position: -28px -448px;
+}
+
+.chat_gri {
+  background-position: -56px -448px;
+}
+
+.search {
+  background-position: -84px -448px;
+}
+
+.search:hover {
+  background-position: -112px -448px;
+}
+
+.search_gri {
+  background-position: -140px -448px;
+}
+
+.italic {
+  background-position: 0 -476px;
+}
+
+.italic:hover {
+  background-position: -28px -476px;
+}
+
+.italic_gri {
+  background-position: -56px -476px;
+}
+
+.block {
+  background-position: -84px -476px;
+}
+
+.block:hover {
+  background-position: -112px -476px;
+}
+
+.block_k {
+  background-position: -112px -476px;
+}
+
+.block_gri {
+  background-position: -140px -476px;
+}
+
+/* 4 */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.new_releases {
+  background-position: 0 -504px;
+}
+
+.new_releases:hover {
+  background-position: -28px -504px;
+}
+
+.new_releases_gri {
+  background-position: -56px -504px;
+}
+
+.verified_user {
+  background-position: -84px -504px;
+}
+
+.verified_user_black {
+  background-position: -112px -504px;
+}
+
+.verified_user_coral {
+  background-position: -140px -504px;
+}
+
+.location {
+  background-position: 0 -532px;
+}
+
+.location:hover {
+  background-position: -28px -532px;
+}
+
+.location_gri {
+  background-position: -56px -532px;
+}
+
+.report {
+  background-position: -84px -532px;
+}
+
+.report_red {
+  background-position: -112px -532px;
+}
+
+.report_gri {
+  background-position: -140px -532px;
+}
+
+.print {
+  background-position: 0 -560px;
+}
+
+.print:hover {
+  background-position: -28px -560px;
+}
+
+.print_gri {
+  background-position: -56px -560px;
+}
+
+.payment {
+  background-position: -84px -560px;
+}
+
+.payment:hover {
+  background-position: -112px -560px;
+}
+
+.payment_gri {
+  background-position: -140px -560px;
+}
+
+.home {
+  background-position: 0 -588px;
+}
+
+.home:hover {
+  background-position: -28px -588px;
+}
+
+.home_gri {
+  background-position: -56px -588px;
+}
+
+.underline {
+  background-position: -84px -588px;
+}
+
+.underline:hover {
+  background-position: -112px -588px;
+}
+
+.underline_gri {
+  background-position: -140px -588px;
+}
+
+.public {
+  background-position: 0 -616px;
+}
+
+.public:hover {
+  background-position: -28px -616px;
+}
+
+.public_gri {
+  background-position: -56px -616px;
+}
+
+.file_1 {
+  background-position: 0px -638px;
+}
+
+.file_2 {
+  background-position: -54px -638px;
+}
+
+.file_3 {
+  background-position: -108px -638px;
+}
+
+.file_4 {
+  background-position: 0 -705px;
+}
+
+.file_5 {
+  background-position: -54px -705px;
+}
+
+.file_6 {
+  background-position: -108px -705px;
+}
+
+.work_gri {
+  background-position: -84px -616px;
+}
+
+.partner_ekli {
+  background-position: -112px -616px;
+}
+
+.work {
+  background-position: -140px -616px;
+}
+
+/* 5 */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.add_box {
+  background-position: -0px -784px;
+}
+
+.add_box:hover {
+  background-position: -28px -784px;
+}
+
+.add_box_gri {
+  background-position: -56px -784px;
+}
+
+.view_module {
+  background-position: -84px -784px;
+}
+
+.view_module:hover {
+  background-position: -112px -784px;
+}
+
+.view_module_gri {
+  background-position: -140px -784px;
+}
+
+.done_all {
+  background-position: -0px -812px;
+}
+
+.done_all:hover {
+  background-position: -28px -812px;
+}
+
+.done_all_gri {
+  background-position: -56px -812px;
+}
+
+.forum {
+  background-position: -84px -812px;
+}
+
+.forum_k {
+  background-position: -112px -812px;
+}
+
+.forum_gri {
+  background-position: -140px -812px;
+}
+
+.tel {
+  background-position: -0px -840px;
+}
+
+.tel:hover {
+  background-position: -28px -840px;
+}
+
+.tel_gri {
+  background-position: -56px -840px;
+}
+
+.fax {
+  background-position: -84px -840px;
+}
+
+.fax:hover {
+  background-position: -112px -840px;
+}
+
+.fax_gri {
+  background-position: -140px -840px;
+}
+
+.at {
+  background-position: -0px -868px;
+}
+
+.at:hover {
+  background-position: -28px -868px;
+}
+
+.at_gri {
+  background-position: -56px -870px;
+}
+
+.web {
+  background-position: -84px -868px;
+}
+
+.web:hover {
+  background-position: -112px -868px;
+}
+
+.web_gri {
+  background-position: -140px -868px;
+}
+
+.translate {
+  background-position: -0px -896px;
+}
+
+.translate:hover {
+  background-position: -28px -896px;
+}
+
+.translate_gri {
+  background-position: -56px -896px;
+}
+
+.view_list {
+  background-position: -84px -896px;
+}
+
+.view_list:hover {
+  background-position: -112px -896px;
+}
+
+.view_list_gri {
+  background-position: -140px -896px;
+}
+
+.view_stream {
+  background-position: -0px -924px;
+}
+
+.view_stream:hover {
+  background-position: -28px -924px;
+}
+
+.view_stream_gri {
+  background-position: -56px -924px;
+}
+
+.add_photo_doc {
+  background-position: -84px -924px;
+}
+
+.add_photo_doc:hover {
+  background-position: -112px -924px;
+}
+
+.add_photo_doc_gri {
+  background-position: -140px -924px;
+}
+
+.hs_ekle {
+  background-position: 0 -952px;
+}
+
+.hs_ekle:hover {
+  background-position: -28px -952px;
+}
+
+.m_sil {
+  background-position: -56px -952px;
+}
+
+.m_sil:hover {
+  background-position: -84px -952px;
+}
+
+.sag_ok {
+  background-position: -112px -952px;
+}
+
+.sag_ok_2 {
+  background-position: -140px -952px;
+}
+
+.etiket {
+  background-position: 0 -981px;
+}
+
+.etiket_2 {
+  background-position: -28px -981px;
+}
+
+.goz {
+  background-position: -56px -980px;
+}
+
+.goz_a {
+  background-position: -84px -980px;
+}
+
+.pager_sag {
+  background-position: -112px -980px;
+}
+
+.pager_sol {
+  background-position: -140px -980px;
+}
+
+.kargo {
+  background-position: 0 -1008px;
+}
+
+.filter_list {
+  background-position: -28px -1008px;
+}
+
+.menu_2 {
+  background-position: -56px -1008px;
+}
+
+.dropdown {
+  background-position: -84px -1008px;
+}
+
+.dropup {
+  background-position: -112px -1008px;
+}
+
+.ozel {
+  background-position: 0 -1032px;
+}
+
+.ozel_2 {
+  background-position: -28px -1032px;
+}
+
+.cikis {
+  background-position: -56px -1036px;
+}
+
+.cekici {
+  background-position: 0 -1064px;
+}
+
+.inf_2 {
+  background-position: -28px -1064px;
+}
+
+.btc {
+  background-position: -56px -1064px;
+}
+
+.dogec {
+  background-position: -84px -1064px;
+}
+
+.ether {
+  background-position: -112px -1064px;
+}
+
+.dash {
+  background-position: 0 -1092px;
+}
+
+.kilit_acik {
+  background-position: -28px -1092px;
+}
+
+.kilit_kapali {
+  background-position: -56px -1092px;
+}
+
+.ltc {
+  background-position: -84px -1092px;
+}
+
+.xrp {
+  background-position: -112px -1092px;
+}
+
+.iota {
+  background-position: 0 -1120px;
+}

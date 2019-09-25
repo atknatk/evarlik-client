@@ -1,0 +1,1678 @@
+@charset "utf-8";
+/*Uye girişinden sonra ana sayfa özellikleri*/
+
+/*Selectbox genel durumu başlangıç*/
+._g3 {
+  color: #525252;
+  vertical-align: top;
+  border: 1px solid #7a7a7a;
+}
+
+._g3 option {
+  line-height: 17px;
+}
+
+/* Selectbox Yükseklik Belirleme BAŞLANGIÇ*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) { /*safari and chrome*/
+  select {
+    line-height: 17px;
+    background: #f4f4f4;
+    padding: 6px 4px 5px 4px;
+  }
+}
+
+select::-moz-focus-inner { /*Remove button padding in FF*/
+  border: 0;
+  padding: 5px 4px 5px 4px
+}
+
+@-moz-document url-prefix() { /* targets Firefox only */
+
+  select {
+    height: 30px; /*30 dan 35e değiştirildi*/
+    padding: 1px 4px 5px 4px !important;
+  }
+}
+
+//@media screen \0
+//{ /* IE Hacks: targets IE 8, 9 and 10 */
+//  select {
+//    padding: 5px 4px 5px 4px !important;
+//    line-height: 17px;
+//  }
+//}
+
+@supports (-ms-ime-align:auto) {
+  select {
+    padding: 5px 4px 5px 4px !important;
+    line-height: 17px;
+  }
+}
+
+select option {
+  padding: 3px 2px;
+}
+
+/* Selectbox Yükseklik Belirleme SON */
+/*Selectbox genel durumu SON*/
+
+._g4 {
+  /*  INPUT text box genel durumu */
+  color: #525252;
+  height: 18px;
+  vertical-align: top;
+  padding: 5px 3px;
+  border: 1px solid #7a7a7a;
+}
+
+._g5 {
+  position: absolute !important;
+}
+
+._g6 {
+  cursor: hand;
+  cursor: pointer;
+}
+
+._g7 {
+  box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, .1);
+}
+
+/*Genel gizlilik ve seçilemezlik gibi ayarlar başlanğıç son*/
+
+/*Butonlar BASLANGIC*/
+
+.b50a { /*Mavi Düzenlme butonu */
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #4384c1;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.b51a { /*gri buton filtre*/
+  padding: 0 5px;
+  color: #6b7c93;
+  line-height: 28px;
+  border: 1px solid rgba(107, 124, 147, 0.3);
+  border-radius: 2px;
+  text-align: center;
+}
+
+.i54c {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #6b7c93;
+  padding: 4px 5px 3px 5px;
+  border-radius: 2px;
+  font-weight: bold;
+  color: #6b7c93;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+  cursor: hand;
+  background-color: #fff;
+}
+
+.i54c:hover {
+  color: #fff;
+  border: 2px solid #6b7c93;
+  background-color: #6b7c93;
+}
+
+/* SWİTCH BUTTON BAŞLANGIÇ */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  vertical-align: text-bottom;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  display: none;
+}
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* SWİTCH BUTTON SON */
+/*Butonlar SON*/
+/*Ana gövde bölümü css BASLANGIC*/
+
+.kese {
+  margin: 0 auto;
+  position: relative;
+}
+
+/*kese içerisinde menu ve sag alan ayrimi*/
+.b63a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.b64a {
+  display: inline-block;
+  width: 100%;
+}
+
+.b60b {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/*Edit butonları için merkezleyici css*/
+
+/*Ana gövde bölümü SON*/
+
+/*Büyük Menu başlangıç*/
+.b10a {
+  overflow: initial;
+}
+
+.b11a {
+  height: 30px;
+  background: #c1c1c1; /* Old browsers */
+  background: -moz-linear-gradient(top, #e9e9e9 0%, #d1d1d1 50%, #ddd 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #e9e9e9 0%, #d1d1d1 50%, #ddd 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e9e9e9 0%, #d1d1d1 50%, #ddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#ddd', GradientType=0); /* IE6-9 */
+}
+
+.b12a {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.b12b {
+  display: inline-block;
+  margin: 6px 0 0 5px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.b12c {
+  float: right;
+}
+
+.b12c a {
+  color: #fff;
+  font-weight: bold;
+  line-height: 28px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.b12c a:nth-child(2) {
+  margin: 0 10px 0 0;
+}
+
+.b12c a:hover {
+  cursor: pointer;
+  cursor: hand;
+  color: #000;
+}
+
+.b12c > a > img {
+  vertical-align: middle;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.b12z {
+  line-height: 30px;
+}
+
+.b12z > img {
+  vertical-align: middle;
+  height: 20px;
+}
+
+.b13a {
+  margin: 0;
+  white-space: nowrap; /* this does the trick */
+  overflow: hidden; /* this prevents the grey divs from overflowing */
+}
+
+.b13h a {
+  text-decoration: none;
+}
+
+.b13b > a:first-child {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  color: #606060;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0 0 0 0px;
+}
+
+.b13a a:hover {
+  cursor: pointer;
+  cursor: hand;
+  background-color: #ff8600;
+  color: #fff;
+}
+
+.b13b {
+  position: relative;
+  display: inline-block;
+  width: 33%;
+}
+
+.b13c {
+  background-color: #4384c1;
+  color: #fff !important;
+  width: 100%;
+}
+
+/*Büyük Menu SON*/
+
+/*Modallar Bölümü Baslangic*/
+
+/*Modal Mesaj kutusu baslanğıc */
+
+.g40a, .g50a, .g41a {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.g40b {
+  position: relative;
+  z-index: 50;
+  margin: 10% auto;
+  border-radius: 2px;
+  width: 600px;
+  /* Could be more or less, depending on screen size */
+  -webkit-box-shadow: 1px 1px 20px 5px #656565;
+  box-shadow: 1px 1px 20px 5px #656565;
+}
+
+.g40c {
+  /* Başlık */
+  margin: 0;
+  font-weight: bold;
+  font-size: medium;
+  padding-left: 10px;
+  color: #FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 2px 2px 0 0;
+}
+
+.g41c {
+  /* Bilgi modal başlık rengi */
+  background-color: #CDCDCD;
+}
+
+.g42c {
+  /* Uyarı modal başlık rengi */
+  background-color: #4384c1;
+}
+
+/*Tamam butonu*/
+/*İptal butonu*/
+
+.g41e, .g42e, .g43e, .g48z {
+  width: 100px;
+  margin-right: 10px;
+  outline: none;
+  padding: 5px;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: #fff;
+  transition: all 0.3s;
+  color: #6b7c93;
+  border: 1px solid #6b7c93;
+
+}
+
+.g41e {
+}
+
+.g41e:hover, .g42e:hover, .g43e:hover {
+  color: #fff;
+  background-color: #6b7c93;
+
+}
+
+/* The Close Button */
+
+.g43c {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+
+.g40e {
+  /* Tamam İptal button div */
+  text-align: right;
+  display: block;
+  background-color: #f8f8f8;
+  padding: 15px 0;
+  border-radius: 0 0 2px 2px;
+}
+
+/*modal kullanıcıdan bilgi almak gerekirse*/
+.g40d {
+  border-bottom: 1px solid #E7E7E7;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #FFFFFF;
+}
+
+.g40d div {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 390px;
+  line-height: 22px;
+}
+
+.g40d div textarea {
+  resize: vertical;
+  overflow: auto;
+  border-radius: 3px;
+  border: thin solid #C5C5C5;
+  width: 384px;
+}
+
+/* ------------------ Resim ekle modal mesaj kutusu baslangıç ------------------ */
+
+.g40a_2 {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.g40b_2 {
+  position: relative;
+  z-index: 50;
+  /* Sit on top */
+  margin: 1% auto;
+  width: 1000px;
+  /* Could be more or less, depending on screen size */
+  -webkit-box-shadow: 1px 1px 20px 5px #656565;
+  box-shadow: 1px 1px 20px 5px #656565;
+}
+
+.g40c_2 {
+  /* Başlık */
+  margin: 0;
+  font-weight: bold;
+  font-size: medium;
+  padding-left: 10px;
+  color: #FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 2px 2px 0 0;
+}
+
+.g41c_2 {
+  /* Bilgi modal başlık rengi */
+  background-color: #CDCDCD;
+}
+
+.g42c_2 {
+  /* Uyarı modal başlık rengi */
+  background-color: #FF9046;
+}
+
+.g48c_2 {
+  /* Turuncu modal başlık rengi */
+  background-color: coral;
+}
+
+/*Tamam butonu*/
+
+.g41e_2 {
+  outline: none;
+  display: block;
+  margin-top: 20px;
+  width: 240px;
+  padding: 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  transition: all 0.3s;
+  font-size: large;
+  color: #6b7c93;
+  border: 1px solid #6b7c93;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.g41e_2:hover {
+  color: white;
+  background-color: #6b7c93;
+}
+
+/* The Close Button */
+
+.g43c_2 {
+  position: absolute;
+  right: 15px;
+  top: 7px;
+}
+
+.g43c_2:hover, .g43c_2:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.g40d_2 {
+  height: 500px;
+  border-radius: 0 0 2px 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #FFFFFF;
+}
+
+.rk1 {
+}
+
+.pane {
+  display: inline-block;
+  float: left;
+  margin: 0 0 3px 5px;
+}
+
+.rk2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 270px;
+  height: 100%;
+  float: right;
+}
+
+#i52f {
+  outline: none;
+}
+
+#i52f::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+#i52f::before {
+  content: 'Resim Seç';
+  display: inline-block;
+  background-color: white;
+  color: #4384c1;
+  border: 2px solid #4384c1;
+  border-radius: 2px;
+  padding: 5px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: 300ms;
+}
+
+#i52f:hover::before {
+  color: white;
+  background-color: #4384c1;
+}
+
+//.rk_y {
+//  display: block;
+//  margin-right: 6px;
+//  color: #997300;
+//  padding: 10px;
+//  font-weight: small;
+//  border: 1px solid #F5E9DC;
+//  border-top: 3px solid #F5E9DC;
+//  position: absolute;
+//  bottom: 4px;
+//}
+
+/*Modal Mesaj kutusu son*/
+
+/*Site içi tepe mesaj başlanğıç*/
+#note {
+  display: none;
+  width: 400px;
+  margin: 0 auto;
+  font-weight: bold;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 6px 0 #868686;
+  box-shadow: 1px 1px 6px 0 #868686;
+}
+
+#note span {
+  padding: 0 0 0 6px;
+  display: none;
+}
+
+.note_o {
+  background: #00FBBB; /*yeşil*/
+  color: #025C2F;
+  text-align: center;
+  line-height: 2;
+  border-bottom: medium solid #00D09B;
+}
+
+.note_h {
+  background: #FF6060; /*turuncu*/
+  color: #7E0606;
+  text-align: center;
+  line-height: 2;
+  border-bottom: medium solid #F44B4B;
+}
+
+.note_u {
+  background: #FF9046; /*kırmızı*/
+  color: #672800;
+  text-align: center;
+  line-height: 2;
+  border-bottom: medium solid #F06000;
+}
+
+.note_i {
+  background: #FDFDFD; /*gri-beyaz*/
+  color: #6A6A6A;
+  text-align: center;
+  line-height: 2;
+  border-bottom: medium solid #E1E1E1;
+}
+
+.yuk {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+  border-top: 2px solid #FF6A00;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid #0095FF;
+  border-left: 2px solid #FFEB00;
+  background-color: transparent;
+  border-radius: 50%;
+  animation: rotator .8s ease infinite;
+
+}
+
+@keyframes rotator {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Site içi tepe mesaj son  */
+
+/*Modallar Bölümü SON*/
+
+/* Sayfalama Başlangıç */
+.b70a {
+  width: 650px;
+  text-align: center;
+  line-height: 40px;
+  margin: 20px auto 10px auto;;
+  font-size: large;
+  color: #ccc;
+}
+
+.b70a > label, .b70b {
+  display: inline-block;
+}
+
+.b70a > label > i {
+  line-height: 24px;
+  vertical-align: middle;
+}
+
+.b70b > span {
+  padding: 3px 8px;
+  margin: 0 2px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.b70b > span:hover {
+  background-color: #f1f1f1;
+}
+
+.pager_active {
+  color: #6b7c93;
+  font-weight: bold;
+}
+
+/* Sayfalama Bitiş */
+
+/*Filtre Bölümü BASLANGIC*/
+.b22a {
+  width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+  height: 36px;
+}
+
+.b22a > div > div {
+  display: inline-block;
+}
+
+.b22a > div > div i {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.b26b {
+  color: white;
+  background-color: #6b7c93;
+}
+
+.b20c, .b21c {
+  display: inline-block;
+}
+
+.b20c {
+  width: 650px;
+}
+
+.b20c > div {
+  margin: 0 5px 0 0;
+}
+
+.b21c {
+  float: right;
+}
+
+/*Filtre Bölümü SON*/
+
+/* JCROP baslangıc*/
+
+.jcrop-holder {
+  direction: ltr;
+  text-align: left;
+  /* IE10 touch compatibility */
+  -ms-touch-action: none;
+}
+
+/* Selection Border */
+.jcrop-vline,
+.jcrop-hline {
+  font-size: 0;
+  position: absolute;
+}
+
+.jcrop-vline {
+  height: 100%;
+  width: 1px !important;
+}
+
+.jcrop-vline.right {
+  right: 0;
+}
+
+.jcrop-hline {
+  height: 1px !important;
+  width: 100%;
+}
+
+.jcrop-hline.bottom {
+  bottom: 0;
+}
+
+/* Invisible click targets */
+.jcrop-tracker {
+  height: 100%;
+  width: 100%;
+  /* "turn off" link highlight */
+  -webkit-tap-highlight-color: transparent;
+  /* disable callout, image save panel */
+  -webkit-touch-callout: none;
+  /* disable cut copy paste */
+  -webkit-user-select: none;
+}
+
+/* Selection Handles */
+.jcrop-handle {
+  background-color: #333333;
+  border: 1px #eeeeee solid;
+  width: 7px;
+  height: 7px;
+  font-size: 1px;
+}
+
+.jcrop-handle.ord-n {
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -4px;
+  top: 0;
+}
+
+.jcrop-handle.ord-s {
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -4px;
+  margin-left: -4px;
+}
+
+.jcrop-handle.ord-e {
+  margin-right: -4px;
+  margin-top: -4px;
+  right: 0;
+  top: 50%;
+}
+
+.jcrop-handle.ord-w {
+  left: 0;
+  margin-left: -4px;
+  margin-top: -4px;
+  top: 50%;
+}
+
+.jcrop-handle.ord-nw {
+  left: 0;
+  margin-left: -4px;
+  margin-top: -4px;
+  top: 0;
+}
+
+.jcrop-handle.ord-ne {
+  margin-right: -4px;
+  margin-top: -4px;
+  right: 0;
+  top: 0;
+}
+
+.jcrop-handle.ord-se {
+  bottom: 0;
+  margin-bottom: -4px;
+  margin-right: -4px;
+  right: 0;
+}
+
+.jcrop-handle.ord-sw {
+  bottom: 0;
+  left: 0;
+  margin-bottom: -4px;
+  margin-left: -4px;
+}
+
+/* Dragbars */
+.jcrop-dragbar.ord-n,
+.jcrop-dragbar.ord-s {
+  height: 7px;
+  width: 100%;
+}
+
+.jcrop-dragbar.ord-e,
+.jcrop-dragbar.ord-w {
+  height: 100%;
+  width: 7px;
+}
+
+.jcrop-dragbar.ord-n {
+  margin-top: -4px;
+}
+
+.jcrop-dragbar.ord-s {
+  bottom: 0;
+  margin-bottom: -4px;
+}
+
+.jcrop-dragbar.ord-e {
+  margin-right: -4px;
+  right: 0;
+}
+
+.jcrop-dragbar.ord-w {
+  margin-left: -4px;
+}
+
+/* The "jcrop-light" class/extension */
+.jcrop-light .jcrop-vline,
+.jcrop-light .jcrop-hline {
+  background: #ffffff;
+  filter: alpha(opacity=70) !important;
+  opacity: .70 !important;
+}
+
+.jcrop-light .jcrop-handle {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #000000;
+  border-color: #ffffff;
+  border-radius: 3px;
+}
+
+/* The "jcrop-dark" class/extension */
+.jcrop-dark .jcrop-vline,
+.jcrop-dark .jcrop-hline {
+  background: #000000;
+  filter: alpha(opacity=70) !important;
+  opacity: 0.7 !important;
+}
+
+.jcrop-dark .jcrop-handle {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #ffffff;
+  border-color: #000000;
+  border-radius: 3px;
+}
+
+/* Simple macro to turn off the antlines */
+.solid-line .jcrop-vline,
+.solid-line .jcrop-hline {
+  background: #ffffff;
+}
+
+/* Fix for twitter bootstrap et al. */
+.jcrop-holder img,
+img.jcrop-preview {
+  max-width: none;
+}
+
+/*Jcrop SON*/
+
+/* Mavi Ülke Etiketleri Başlangıç*/
+.g20b {
+  display: none;
+  margin: 2px;
+  padding: 0 5px 2px 5px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 22px;
+  background-color: #71a2d1;
+  border-radius: 2px;
+}
+
+.g20b i {
+  color: #ddd;
+  margin: 0 2px 0 4px;
+  font-style: normal;
+}
+
+.g20b b {
+  color: #fff;
+  margin: 0 4px 0 2px;
+  font-weight: normal;
+}
+
+.g20b div {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.g20b div:hover {
+  cursor: pointer;
+  cursor: hand;
+  color: red;
+}
+
+/* Mavi Ülke Etiketleri SON */
+
+/*Responsive tab baslangic*/
+
+@-webkit-keyframes fake {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opactity: 1;
+  }
+}
+
+@keyframes fake {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opactity: 1;
+  }
+}
+
+/*
+body {
+  -webkit-animation: fake 1s infinite;
+  animation: fake 1s infinite;
+  background-color: #fafafa;
+  font-family: 'Open Sans';
+}
+*/
+
+.responsive-tabs {
+}
+
+.responsive-tabs .state {
+  position: absolute;
+  left: -10000px;
+}
+
+.responsive-tabs .flex-tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.responsive-tabs .flex-tabs .tab {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-height: 40px;
+}
+
+.responsive-tabs .flex-tabs .panel {
+  background-color: #fcfcfc;
+  /*padding: 10px 0;*/
+  /*display: none;*/
+  width: 100%;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.responsive-tabs .tab {
+  display: inline-block;
+  padding: 10px;
+  vertical-align: top;
+  background-color: #eee;
+  text-align: center;
+  cursor: hand;
+  cursor: pointer;
+  border-left: 10px solid #ccc;
+}
+
+.responsive-tabs .tab:hover {
+  background-color: #fff;
+}
+
+#coin-tabs {
+  > label[checked] {
+    background-color: #fff;
+    cursor: default;
+    border-left-color: #69be28;
+  }
+
+  ng-component {
+    width: 100%;
+  }
+}
+
+#coin-tabs {
+  > label[checked] {
+    background-color: #fff;
+    cursor: default;
+    border-left-color: #69be28;
+  }
+}
+
+#coin-tabs {
+  > label[checked] {
+    background-color: #fff;
+    cursor: default;
+    border-left-color: #69be28;
+  }
+}
+
+.b13g {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+  .flex-tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .flex-tabs .tab {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .flex-tabs .tab:last-of-type {
+    border-bottom: none;
+  }
+
+  .b13g {
+    display: none !important;
+  }
+
+  $selected-panel-index: 0;
+
+  @for $i from 1 through 5 {
+    #coin-tabs > *:nth-child(#{$i}) {
+
+      @if [checked] {
+        -webkit-box-ordinal-group: $i+1;
+        -webkit-order: $i;
+        -ms-flex-order: $i;
+        order: $i;
+        $selected-panel-index: $i;
+      } @else {
+        -webkit-box-ordinal-group: $i+1;
+        -webkit-order: $i;
+        -ms-flex-order: $i;
+        order: $i;
+      }
+    }
+  }
+
+  #coin-tabs {
+    ng-component {
+      -webkit-box-ordinal-group: $selected-panel-index+1;
+      -webkit-order: $selected-panel-index;
+      -ms-flex-order: $selected-panel-index;
+      order: $selected-panel-index;
+    }
+  }
+
+  .flex-tabs #tab-one-label {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .flex-tabs #tab-two-label {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .flex-tabs #tab-three-label {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+    -ms-flex-order: 5;
+    order: 5;
+  }
+
+  .flex-tabs #tab-four-label {
+    -webkit-box-ordinal-group: 8;
+    -webkit-order: 7;
+    -ms-flex-order: 7;
+    order: 7;
+  }
+
+  .flex-tabs #tab-one-panel {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .flex-tabs #tab-two-panel {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  .flex-tabs #tab-three-panel {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+    -ms-flex-order: 6;
+    order: 6;
+  }
+
+  .flex-tabs #tab-four-panel {
+    -webkit-box-ordinal-group: 9;
+    -webkit-order: 8;
+    -ms-flex-order: 8;
+    order: 8;
+  }
+
+  #tab-one:checked ~ .tabs #tab-one-label,
+  #tab-two:checked ~ .tabs #tab-two-label,
+  #tab-three:checked ~ .tabs #tab-three-label,
+  #tab-four:checked ~ .tabs #tab-four-label {
+    border-bottom: none;
+  }
+
+  #tab-one:checked ~ .tabs #tab-one-panel,
+  #tab-two:checked ~ .tabs #tab-two-panel,
+  #tab-three:checked ~ .tabs #tab-three-panel,
+  #tab-four:checked ~ .tabs #tab-four-panel {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.koin_bakiye {
+  line-height: 25px;
+}
+
+/*flex panel içerik*/
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* We tell all items to be 100% width, via flex-basis */
+.wrapper > * {
+  flex: 1 100%;
+  padding: 5px;
+}
+
+/* We rely on source order for mobile-first approach
+ * in this case:
+ * 1. header
+ * 2. article
+ * 3. aside 1
+ * 4. aside 2
+ * 5. footer
+ */
+
+.main {
+  background-color: white;
+}
+
+.aside-1 {
+  background-color: white;
+}
+
+.aside-2 {
+  background-color: white;
+}
+
+/*Tepe Menü ayarları*/
+.b13b > a:first-child {
+  line-height: 35px;
+  font-size: 12px;
+}
+
+/*Tepe Menü ayarları son*/
+/*paneller bölümü*/
+.kese {
+  width: 100%;
+}
+
+.varliklar_ozet {
+  line-height: 25px;
+  margin-bottom: 5px;
+  padding: 0 5px;
+}
+
+.varliklar_ozet > div {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.varliklar_ozet > div > span {
+  margin-right: 6px;
+}
+
+.grafik_menu {
+  line-height: 35px;
+}
+
+.grafik_menu > div {
+  float: right;
+}
+
+.grafik_menu > div > i {
+  margin: 0 5px;
+  padding: 2px;
+}
+
+/*paneller bölümü son*/
+/* Medium screens */
+@media all and (min-width: 600px) {
+  /* We tell both sidebars to share a row */
+  /*Tepe Menü ayarları*/
+  .b12a {
+    width: calc(100% - 10px);
+    margin: 0 auto;
+  }
+  .b13b > a:first-child {
+    line-height: 35px;
+    font-size: 18px;
+  }
+  /*Tepe Menü ayarları son*/
+  /*paneller bölümü*/
+  .kese {
+    width: calc(100% - 10px);
+  }
+  /*paneller bölümü son*/
+  .aside {
+    flex: 1 auto;
+  }
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars
+   */
+  /*Tepe Menü ayarları*/
+  .b12a {
+    width: calc(100% - 10px);
+    margin: 0 auto;
+  }
+  .b13b > a:first-child {
+    line-height: 80px;
+    font-size: 25px;
+  }
+  .b13g {
+    display: block;
+  }
+  /*Tepe Menü ayarları son*/
+  /*paneller bölümü*/
+  .kese {
+    width: calc(100% - 10px);
+  }
+  /*paneller bölümü son*/
+
+  .main {
+    flex: 3 40%;
+  }
+  .aside-1 {
+    flex: 1 18%;
+  }
+  .aside-2 {
+    flex: 1 18%;
+  }
+  .aside-1 {
+    order: 1;
+    -webkit-box-ordinal-group: 2;
+  }
+  .main {
+    order: 2;
+    -webkit-box-ordinal-group: 3;
+  }
+  .aside-2 {
+    order: 3;
+    -webkit-box-ordinal-group: 4;
+  }
+  .footer {
+    order: 4;
+    -webkit-box-ordinal-group: 5;
+  }
+}
+
+/*flex panel içerik son*/
+/*responsive tabs son*/
+
+/*Alsat header baslangic*/
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+}
+
+.header > div {
+  margin: 0 10px;
+}
+
+.header > div > b {
+}
+
+.header > div > i {
+  font-style: normal;
+  padding: 0 2px 0 0;
+}
+
+.header > div > span {
+  padding-right: 5px;
+}
+
+/*Alsat header son*/
+
+/*Alım Satım tablo başlıkları*/
+.alsat > div:first-child {
+  line-height: 25px;
+  margin-bottom: 5px;
+  color: coral;
+}
+
+.alsat > div:nth-child(2) {
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.alsat > div:nth-child(2) > div {
+  display: inline-block;
+  padding: 5px;
+  width: 28%;
+  text-align: center;
+}
+
+.alsat > div:nth-child(2) > div:last-child {
+  width: 35%;
+}
+
+.alsat_tablo {
+  border-bottom: 1px solid #ddd;
+}
+
+.alsat_tablo > div {
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+}
+
+.alsat_tablo > div:hover {
+  background-color: #E4E464;
+}
+
+.alsat_tablo > div > div {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  width: 32%;
+  border-left: 1px solid #ddd;
+  color: #888;
+  font-size: 12px;
+}
+
+.alsat_tablo > div > div:last-child {
+  border-right: 1px solid #ddd;
+}
+
+/*Alım Satım tablo başlıkları son*/
+
+/*Tab alış satış bölümü*/
+.i10b {
+  margin-bottom: 10px;
+}
+
+.i10c {
+}
+
+.i10c > li {
+  text-align: center;
+  display: inline-block;
+  background-color: #85bb65;
+  list-style-type: none;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 15px;
+}
+
+.i10c > li .i11c {
+  font-size: small;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  display: block;
+  padding: 10px 10px 8px 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.i12c {
+  background-color: #e6c200;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 15px;
+  box-shadow: inset 0px -3px 3px -2px #e6c200;
+}
+
+.i10b > hr {
+  border: 0;
+  border-bottom: 2px solid #85bb65;
+  margin: 0;
+}
+
+.i11e {
+  border: 1px solid #85bb65;
+  padding-bottom: 10px;
+}
+
+/*Alsat tab baslangic*/
+.alsat_tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.alsat_tab > div {
+  display: flex;
+  flex: 1;
+  margin: 8px;
+  display: inline-block;
+}
+
+.alsat_tab > div:first-child { /*width:45%;*/
+}
+
+.alsat_tab > div:first-child {
+  border-right: 1px solid #ddd;
+}
+
+.alsat_tab > div > div {
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.alsat_tab > div > div > label {
+  line-height: 25px;
+}
+
+.alsat_tab > div > div > div {
+  max-width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 1px solid #eee;
+  width: 100%;
+  height: 28px;
+  margin-right: 8px;
+  min-width: 140px;
+}
+
+.alsat_tab > div > div > div > i {
+  margin-top: 3px;
+}
+
+.alsat_tab > div > div > div > input {
+  border: 0;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: right;
+  width: calc(100% - 36px);
+  padding-right: 5px;
+}
+
+.alsat_tab > div > div > div > input:focus {
+  outline: none !important;
+  border-color: #fff;
+}
+
+alsat_tab > div > div > div > input:disabled {
+  background-color: rgb(235, 235, 228);
+}
+
+.alsat_tab > div > div > div > label {
+  color: #555;
+  line-height: 25px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 30px;
+  text-align: left;
+  padding: 2px 6px 2px 0;
+}
+
+.alsat_tab > div > div:first-child {
+  margin: 0 0 10px 0;
+}
+
+.alsat_tab > div > div:first-child > label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.alsat_tab > div > div:first-child > span {
+  float: right;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+.alsat_tab > div > div:last-child {
+  justify-content: center;
+}
+
+.alsat_tab > div > div:last-child > div {
+  justify-content: center;
+  align-content: center;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 18px;
+  height: 18px;
+  width: inherit;
+  color: #fff;
+  font-weight: bold;
+  background-color: #4384c1;
+  border: 0;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px 0 0 0;
+
+}
+
+/*Tab alış satış bölümü son*/
+
+/*.row-changed {
+  background-color: lightgreen;
+  -webkit-transition: background-color .5s linear;
+  -moz-transition: background-color .5s linear;
+  -ms-transition: background-color .5s linear;
+  -o-transition: background-color .5s linear;
+  transition: background-color .5s linear;
+}*/
+
+
+@keyframes rowPushAnimation {
+  100% {
+    padding-left: 0px;
+  }
+  0% {
+    padding-left: 100px;
+  }
+}
+
+.row-push-animate {
+  animation: rowPushAnimation 1s;
+}

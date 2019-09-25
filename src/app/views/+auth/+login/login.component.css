@@ -1,0 +1,556 @@
+@charset "utf-8";
+p, body {
+  margin: 0;
+}
+
+.ust_bant_ortalama {
+  max-width: 1000px;
+  height: 90px;
+  margin: 0 auto 15px auto;
+  overflow: hidden;
+}
+
+.liste {
+  overflow: auto;
+}
+
+/*padding:top,right,bottom,left */
+.login-logo {
+  float: left;
+  height: 70px;
+  background-color: #fff;
+  padding: 15px 10px 5px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.login-logo > div {
+  vertical-align: top;
+  color: #6b7c93;
+  display: inline-block;
+}
+
+.login-logo > div > div {
+  margin: 0 0 0 10px;
+}
+
+.login-logo > div > img {
+  vertical-align: bottom;
+  width: 60px;
+}
+
+.login-logo > div > a {
+  margin: 0 0 0 10px;
+  text-decoration: none;
+  color: #4384c1;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.ust_menu {
+  float: right;
+  margin: 15px 0 0 0;
+}
+
+.ust_menu a {
+  color: #606060;
+  border-radius: 2px;
+  padding: 5px 10px;
+  background-color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.ust_menu a:hover { /*text-decoration:underline;*/
+}
+
+@media all and (max-width: 1000px) {
+  .ust_bant_ortalama {
+    padding: 0 10px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .ust_bant_ortalama {
+    padding: 0 5px;
+    height: 47px;
+  }
+
+  .login-logo > div > img {
+    width: 30px;
+  }
+
+  .login-logo {
+    height: 42px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .login-logo > div > a {
+    margin: 0 0 0 5px;
+    font-size: 20px;
+  }
+
+  .login-logo > div > div {
+    margin: 0 0 0 5px;
+    font-size: 12px;
+  }
+
+  .ust_menu {
+    margin: 10px 0 0 0;
+  }
+
+  .ust_menu a {
+    font-size: 12px;
+    margin: 0 5px;
+    padding: 5px 5px;
+  }
+}
+
+.login-kese {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/*giriş ve kayıt Bölümü*/
+
+.anasayfa_giris_panel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 400px;
+  justify-content: center;
+}
+
+.anasayfa_giris_panel > div:first-child {
+  display: flex;
+  flex-grow: 2;
+  margin-bottom: 15px;
+}
+
+.anasayfa_giris_panel > div:last-child {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+/*Anasayfa Giriş başlanğıç*/
+.login-giris, .kayit {
+  max-width: 350px;
+  display: inline-block;
+  padding: 15px;
+  border: solid 1px #4384c1;
+  position: relative;
+  background-color: #fff;
+}
+
+.login-giris > h3 {
+  margin: 10px 0 0 0;
+  padding: 0;
+  color: #4384c1;
+  display: inline-block;
+  width: 100px;
+}
+
+.login-giris > div:last-child {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-giris > div:last-child > a {
+  text-decoration: none;
+}
+
+.giris_form, .kayit_form {
+  max-width: 350px;
+}
+
+.giris_form input[type="text"], .kayit_form input[type="text"],
+.giris_form input[type="password"], .kayit_form input[type="password"],
+.sifre_unut input[type="email"] {
+  font-size: 16px;
+  padding: 5px 7px;
+  margin: 5px 0;
+  width: calc(100% - 18px);
+}
+
+.giris_form button[type="submit"], .sifre_unut button[type="submit"], .kayit_form button[type="submit"] {
+  cursor: pointer;
+  cursor: hand;
+  padding: 5px;
+  max-width: 352px;
+  min-width: 320px;
+  height: 35px;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  background-color: #4384c1;
+
+}
+
+a.giris_unuttum {
+  text-decoration: none;
+  color: #555555;
+  font-size: 12px;
+  height: 15px;
+  float: right;
+  margin: 15px 0 0 0;
+}
+
+a.giris_unuttum:hover {
+  cursor: pointer;
+  cursor: hand;
+  color: #505050;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sifre_unut {
+  display: block;
+}
+
+.sifre_m{
+ font-size: 12px;
+}
+.giris_goster {
+  cursor: pointer;
+  cursor: hand;
+  margin: 0 0 0 20px;
+  color: #7c91ad;
+  font-weight: bold;
+  float: right;
+}
+
+.sifre_unut_div {
+  margin: 20px 0 15px 0;
+}
+
+.f_sifre_unut {
+  margin: 10px 0 3px 0;
+  font-size: 12px;
+}
+
+.kayit {
+  background-color: #fff;
+}
+
+.kayit > h3 {
+  margin: 10px 0 0 0;
+  padding: 0;
+  color: #4384c1;
+  display: inline-block;
+}
+
+.k_sozlesme {
+  margin-top: 10px;
+  display: flex;
+}
+
+.k_sozlesme > span {
+  margin: 0 0 0 10px;
+}
+
+.k_sozlesme > span > a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0 2px;
+}
+
+.k_sozlesme > span > a:hover {
+  color: #333;
+}
+
+/*duyuru ve mesajlar baslangic*/
+
+.duyur {
+  color: #fff;
+  vertical-align: middle;
+}
+
+.duyur > p {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.duyur > ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  margin: 10px;
+}
+
+.duyur > ul > li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.duyur > span {
+  font-size: 18px;
+}
+
+/*duyuru ve mesajlar son*/
+
+@media all and (max-width: 1000px) {
+  .anasayfa_giris_panel {
+    padding: 0 20px;
+  }
+
+  .anasayfa_giris_panel > div:first-child {
+    display: flex;
+    flex-shrink: 2;
+  }
+
+  .duyur > ul > li {
+    padding: 0 15px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .giris_form button[type="submit"], .sifre_unut button[type="submit"], .kayit_form button[type="submit"] {
+    min-width: 265px;
+  }
+
+  .duyur > ul > li {
+    padding: 0 5px;
+  }
+
+  .duyur > p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  k_sozlesme > label {
+    font-size: 11px;
+  }
+
+  .k_sozlesme > span {
+    font-size: 11px;
+  }
+
+  .k_sozlesme > span > a {
+    font-size: 10px;
+  }
+
+}
+
+/* Anasayfa banner başlanğıç  */
+.usel {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+/* Anasayfa banner başlanğıç  */
+.usel {
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.coin_anasayfa_fiyat {
+  width: 100%;
+  background-color: #000;
+  min-height: 30px;
+  padding: 10px 0;
+}
+
+.coin_anasayfa_fiyat > div {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.coin_anasayfa_fiyat > div > div {
+  width: 18%;
+  min-height: 40px;
+  border: 1px solid #000;
+  min-width: 200px;
+  margin: 5px;
+  padding: 5px;
+  color: #fff;
+}
+
+.coin_anasayfa_fiyat > div > div > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.coin_anasayfa_fiyat > div > div > div:first-child > img {
+  width: 32px;
+}
+
+.coin_anasayfa_fiyat > div > div > div:first-child > span {
+  padding: 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.coin_anasayfa_fiyat > div > div > div:first-child > label {
+  color: green;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.coin_anasayfa_fiyat > div > div > div:last-child {
+  justify-content: center;
+}
+
+.coin_anasayfa_fiyat > div > div > div:last-child > span {
+  font-size: 18px;
+}
+
+.avntj {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.avntj > div {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 300px;
+}
+
+.avntj > div > div {
+  width: 20%;
+  height: 140px;
+  border: 1px solid #ccc;
+  min-width: 280px;
+  margin: 10px;
+}
+
+.avntj > div > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.avntj > div > div > div > h3 {
+  margin: 4px 0 10px 0;
+}
+
+.avntj > div > div > div > span {
+  line-height: 22px;
+}
+
+.avntj > div > div > div:first-child {
+  width: 60px;
+}
+
+.avntj > div > div > div:last-child {
+  width: calc(100% - 60px);
+  padding: 10px 0;
+}
+
+/* Anasayfa banner son  */
+
+/* Etiketleme Son*/
+
+/* Hakkımızda CSS Başlangıç */
+
+.hakkimizda {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.hakkimizda_img {
+  width: 980px;
+  height: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.hakkimizda_icerik {
+  padding: 10px;
+  text-align: justify;
+  line-height: 28px;
+}
+
+/* Hakkımızda CSS Bitiş */
+
+/* Girdi kontrol başlanğıç*/
+.ue {
+  border: 1px solid #CC0000;
+}
+
+/* Girdi kontrol son*/
+
+.rapor_kapat:hover,
+.rapor_kapat:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#am {
+  padding: 10px;
+  margin: 5px auto 20px;
+  height: 400px;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+#am > p {
+  margin: 0 0 8px 0;
+  text-align: justify;
+}
+
+#am > h2 {
+  text-align: center;
+}
+
+#ak {
+  float: left;
+}
+
+#ao {
+  float: right;
+}
+
+/*Rapor kutusu son*/
+
+.main-login {
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background-color: #4384c1;
+}
+
+@media only screen and (max-width: 600px) {
+  .ust_menu a:nth-child(1) {
+    min-width: 86px;
+    text-align: center;
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .ust_menu a:nth-child(1) {
+    min-width: 132px;
+    text-align: center;
+    display: inline-block;
+  }
+}

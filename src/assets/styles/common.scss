@@ -1,0 +1,21 @@
+.pull-right {
+  float: right !important;
+}
+
+a > .small-logo {
+  content: $logo;
+}
+
+label {
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+.truncate {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
